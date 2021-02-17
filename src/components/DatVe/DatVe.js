@@ -4,7 +4,7 @@ import { useEffect } from 'react';
 import { useCallback } from 'react';
 import { useState } from 'react';
 import { NavLink } from 'react-router-dom';
-import { domain, userLogin } from '../../config/settings';
+import { domain, maLichChieu, userLogin } from '../../config/settings';
 import { qlPhimService } from '../../services/QuanLyPhimServices';
 
 const DatVe = (props) => {
@@ -87,7 +87,7 @@ const DatVe = (props) => {
     return (
         <div>
             <div className="container-fluid mt-4">
-                <NavLink to="/" style={{ fontSize: '30px', textDecoration: 'none', fontWeight: 'bold' }}>CyberMovies</NavLink>
+                <NavLink to="/" onClick={()=>{localStorage.removeItem(maLichChieu)}} style={{ fontSize: '30px', textDecoration: 'none', fontWeight: 'bold' }}>CyberMovies</NavLink>
                 <div className="col-md-12 col-sm-12">
                     <h3 className="text-center">Màn hình</h3>
                     <div className="text-center">

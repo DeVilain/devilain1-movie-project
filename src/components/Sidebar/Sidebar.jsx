@@ -1,32 +1,30 @@
 import React from 'react'
+
 import { Link as LinkScroll } from 'react-scroll';
-import { Link as LinkRoute } from 'react-router-dom'
+import { NavLink, Link as LinkRoute } from 'react-router-dom'
 import { FaTimes } from 'react-icons/fa'
 import { GrLogout } from 'react-icons/gr'
 import { userLogin } from '../../config/settings'
 import { useDispatch, useSelector } from 'react-redux';
+import { dang_xuat } from '../../redux/types/QuanLyNguoiDungTypes';
 
 const Sidebar = ({ isOpen, toggle }) => {
-    let user = {};
-    if (localStorage.getItem(userLogin)) {
-        user = JSON.parse(localStorage.getItem(userLogin));
-    }
 
-    const maLichChieu = useSelector(state => state.IdReducer.maLichChieu);
+    const userLoggedIn = useSelector(state => state.QuanLyNguoiDungReducer.nguoiDung);
 
-    let dispatch = useDispatch();
+    const dispatch = useDispatch();
 
-    const renderSignOutBtn = () => {
-        return <>
-            <LinkRoute to="/profile" className="side-link-username">Xin chào {user.taiKhoan}</LinkRoute>
-            <button onClick={() => {
-                user = localStorage.removeItem(userLogin);
-                dispatch({
-                    type: 'RESET',
-                    payload: maLichChieu
-                })
-            }}><GrLogout></GrLogout></button>
-        </>
+    function renderLogOutBtn() {
+        return (
+            <>
+                <NavLink to="/user">Xin chào {userLoggedIn.taiKhoan}</NavLink>
+                <button onClick={() => {
+                    dispatch({
+                        type: dang_xuat
+                    })
+                }}><GrLogout /></button>
+            </>
+        )
     }
 
     return (
@@ -44,7 +42,7 @@ const Sidebar = ({ isOpen, toggle }) => {
                     </ul>
                     <div className="sidebar-btn-wrap">
                         {
-                            user.taiKhoan ? renderSignOutBtn() : <LinkRoute className="sidebar-btn" to="/signin">Đăng nhập</LinkRoute>
+                            userLoggedIn.taiKhoan ? renderLogOutBtn() : <LinkRoute className="sidebar-btn" to="/signin">Đăng nhập</LinkRoute>
                         }
 
                     </div>

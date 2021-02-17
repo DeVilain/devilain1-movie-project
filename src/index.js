@@ -2,12 +2,21 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
-import { applyMiddleware, createStore} from 'redux';
-import {Provider} from 'react-redux';
+import { applyMiddleware, createStore, compose } from 'redux';
+import { Provider } from 'react-redux';
 import rootReducer from './redux/reducers/rootReducer';
 import thunk from 'redux-thunk';
+import './sass/css/style.css';
+import { accessToken, maLichChieu, userLogin } from './config/settings';
 
-const store = createStore(rootReducer, applyMiddleware(thunk));
+const composeEnhancer = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
+
+const store = createStore(
+  rootReducer,
+  composeEnhancer(applyMiddleware(thunk))
+);
+
+//console.log('public url: ', process.env.PUBLIC_URL)
 
 ReactDOM.render(
   <Provider store={store}>

@@ -5,15 +5,16 @@ import { GrLogout } from 'react-icons/gr'
 import { animateScroll as scroll } from 'react-scroll'
 import { Link as LinkScroll } from 'react-scroll'
 import { useDispatch, useSelector } from 'react-redux'
-import { userLogin } from '../../config/settings'
+import { dang_xuat } from '../../redux/types/QuanLyNguoiDungTypes'
 
 const Navbar = ({ toggle }) => {
-    //
+    // state xử lý hiệu ứng scroll của navbar
     const [scrollNav, setScrollNav] = useState(false);
-    const propNguoidung = useSelector(state => state.QuanLyNguoiDungReducer.nguoiDung);
-    const maLichChieu = useSelector(state => state.IdReducer.maLichChieu);
-    
-    let dispatch = useDispatch();
+
+    // 
+    const userLoggedIn = useSelector(state => state.QuanLyNguoiDungReducer.nguoiDung);
+
+    const dispatch = useDispatch();
 
 
     const changeBackgroundNav = () => {
@@ -28,29 +29,22 @@ const Navbar = ({ toggle }) => {
         window.addEventListener('scroll', changeBackgroundNav);
     }, []);
 
+
     const toggleHome = () => {
         scroll.scrollToTop();
     }
 
-    // load lên tài khoản đã lưu trong localStorage
-    let user = {};
-    if (localStorage.getItem(userLogin)) {
-        user = JSON.parse(localStorage.getItem(userLogin));
-    }
-
-    // render btn đăng xuất
-    const renderSignOutBtn = () => {
-        return <>
-            <NavLink to="/profile" className="nav-link-username">Xin chào {user.taiKhoan}</NavLink>
-            <button onClick={()=>{
-                user = localStorage.removeItem(userLogin);
-                toggleHome();
-                dispatch({
-                    type: 'RESET',
-                    payload: maLichChieu
-                })
-            }}><GrLogout></GrLogout></button>
-        </>
+    function renderLogOutBtn() {
+        return (
+            <>
+                <NavLink to="/user">Xin chào {userLoggedIn.taiKhoan}! </NavLink>
+                <button onClick={() => {
+                    dispatch({
+                        type: dang_xuat,
+                    })
+                }} ><GrLogout></GrLogout></button>
+            </>
+        )
     }
 
     return (
@@ -93,10 +87,7 @@ const Navbar = ({ toggle }) => {
                     </ul>
                     <div className="nav-btn">
                         {
-                            user.taiKhoan ?
-                                renderSignOutBtn()
-                                :
-                                <NavLink to="/signin"><button>Đăng nhập</button></NavLink>
+                            userLoggedIn.taiKhoan ? renderLogOutBtn() : <NavLink to="/signin"><button>Đăng nhập</button></NavLink>
                         }
                     </div>
                 </div>

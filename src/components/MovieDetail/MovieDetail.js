@@ -2,15 +2,14 @@ import React, { useCallback, useEffect, useState } from 'react'
 import { qlPhimService } from '../../services/QuanLyPhimServices';
 import { NavLink } from 'react-router-dom';
 import moment from 'moment';
-import { userLogin } from '../../config/settings';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
+import { maLichChieu } from '../../config/settings';
 
 const MovieDetail = ({ maPhim }) => {
 
-    let user = {};
-    if (localStorage.getItem(userLogin)) {
-        user = JSON.parse(localStorage.getItem(userLogin));
-    }
+    let userLogined = useSelector(state => state.QuanLyNguoiDungReducer.nguoiDung);
+    //console.log(userLogined);
+    
     //console.log(user);
     // lưu trữ và thay đổi state thongTinPhim
     let [thongTinPhim, setThongTinPhim] = useState({});
@@ -167,13 +166,13 @@ const MovieDetail = ({ maPhim }) => {
                                                             <div className="row">
                                                                 {cumRap.lichChieuPhim?.slice(0, 12).map((lichChieu, index) => { /* slice: duyệt 0 -> 12 */
                                                                     /* sử dụng thư viện moment để format lại thời gian theo ý thích */
-                                                                    return <NavLink to={user.taiKhoan ? `/datve/${lichChieu.maLichChieu}` : `/signin`}
+                                                                    return <NavLink to={userLogined.taiKhoan ? `/datve/${lichChieu.maLichChieu}` : `/signin`}
                                                                         className="showtime__link col-md-3 col-sm-4"
                                                                         key={index}
-                                                                        onClick={() => {dispatch({
-                                                                            type: 'GUI_MA',
-                                                                            payload: lichChieu.maLichChieu,
-                                                                        })}}>{moment(lichChieu.ngayChieuGioChieu).format('hh:mm A')}</NavLink>
+                                                                        onClick={() => {
+                                                                            localStorage.setItem(maLichChieu ,JSON.stringify(lichChieu.maLichChieu))
+                                            
+                                                                        }}>{moment(lichChieu.ngayChieuGioChieu).format('hh:mm A')}</NavLink>
                                                                 })}
                                                             </div>
                                                         </div>

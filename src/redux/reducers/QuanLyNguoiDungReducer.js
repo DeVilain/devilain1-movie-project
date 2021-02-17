@@ -1,14 +1,14 @@
-import { dang_ky, dang_nhap } from '../types/QuanLyNguoiDungTypes'
-import { userLogin, userSignup } from '../../config/settings'
+import { dang_ky, dang_nhap, dang_xuat } from '../types/QuanLyNguoiDungTypes'
+import { accessToken, maLichChieu, userLogin, userSignup } from '../../config/settings'
 
 let usLogin = {};
-if (localStorage.getItem(userLogin)) {
-    usLogin = JSON.parse(localStorage.getItem(userLogin));
+if (sessionStorage.getItem(userLogin)) {
+    usLogin = JSON.parse(sessionStorage.getItem(userLogin));
 }
 
 let usSignup = {};
-if (localStorage.getItem(userSignup)) {
-    usSignup = JSON.parse(localStorage.getItem(userSignup));
+if (sessionStorage.getItem(userSignup)) {
+    usSignup = JSON.parse(sessionStorage.getItem(userSignup));
 }
 
 const initialState = {
@@ -21,9 +21,13 @@ export default (state = initialState, action) => {
         case dang_nhap:
             state.nguoiDung = action.nguoiDung;
             return {...state };
+        case dang_xuat:
+            sessionStorage.removeItem(userLogin);
+            sessionStorage.removeItem(accessToken);
+            sessionStorage.removeItem(maLichChieu);
+            return {...state, nguoiDung: {} };
         case dang_ky:
             state.nguoiDangKy = action.nguoiDangKy;
-            window.alert('Đăng ký thành công');
             return {...state };
         default:
             return state;

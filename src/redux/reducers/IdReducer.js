@@ -1,14 +1,21 @@
-const ma = {
-    maLichChieu: '',
+import { maLichChieu } from "../../config/settings";
+
+let maLichChieuTemp = null;
+
+if (localStorage.getItem(maLichChieu)) {
+    maLichChieuTemp = JSON.parse(localStorage.getItem(maLichChieu));
 }
+
+const ma = maLichChieuTemp;
 
 export default (state = ma, action) => {
     switch (action.type) {
         case 'GUI_MA':
-            state.maLichChieu = action.payload;
+            state = action.payload;
+            console.log(state)
             return state;
         case 'RESET':
-            state.maLichChieu = '';
+            state = '';
             //console.log('malichieu', state.maLichChieu);
             return state;
         default:

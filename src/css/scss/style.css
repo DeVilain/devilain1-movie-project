@@ -138,7 +138,7 @@ ul {
   top: 0;
   left: 0;
   transition: 0.3s ease-in-out;
-  top: -500%; }
+  top: -100%; }
 
 .sidebar-container-opened {
   position: fixed;
@@ -569,256 +569,123 @@ button {
       transition: none;
       transform: perspective(1000px) rotateY(calc(var(--x) * 45deg)) rotateX(calc(var(--y) * -45deg)); }
 
-.cinema-container {
+.cinema {
   background: #010606;
-  font-size: 12px;
-  max-height: 850px;
-  padding: 50px 80px 0 80px;
-  position: relative; }
-  @media screen and (max-width: 768px) {
-    .cinema-container {
-      padding: 30px 40px 0 40px; } }
-  @media screen and (max-width: 400px) {
-    .cinema-container {
-      padding: 20px 30px 0 30px; } }
-  .cinema-container h1 {
-    color: white;
-    font-size: 40px;
-    text-align: center; }
-    @media screen and (max-width: 600px) {
-      .cinema-container h1 {
-        font-size: 30px; } }
-  .cinema-container p {
-    margin: 0;
-    color: #949494; }
-  .cinema-container button {
-    padding: 10px;
-    font-size: 14px;
-    width: 80px;
-    margin: 5px 0 0 5px; }
-    @media screen and (max-width: 768px) {
-      .cinema-container button {
-        font-size: 13px;
-        padding: 5px;
-        width: 70px; } }
-  .cinema-container .cinema-wrapper {
+  padding-top: 70px; }
+  .cinema__block__left {
+    overflow-y: scroll;
+    height: 700px; }
+  .cinema__block__left:hover::-webkit-scrollbar {
+    width: 3px;
+    background-color: lightgrey; }
+  .cinema__block ::-webkit-scrollbar {
+    width: 0;
+    background-color: lightgrey; }
+  .cinema__block ::-webkit-scrollbar-thumb {
+    background-color: #01bf71;
+    border-radius: 5px; }
+  .cinema__detail {
+    background-color: #fff;
     display: flex;
-    border: 1px solid #cececf;
-    background: white; }
-    @media screen and (max-width: 600px) {
-      .cinema-container .cinema-wrapper {
-        max-height: 501px; } }
-    .cinema-container .cinema-wrapper img {
-      width: 50px;
-      height: 50px; }
-      @media screen and (max-width: 400px) {
-        .cinema-container .cinema-wrapper img {
-          width: 40px;
-          height: 40px; } }
-    .cinema-container .cinema-wrapper .cinema-logo {
-      width: 90px; }
-      @media screen and (max-width: 600px) {
-        .cinema-container .cinema-wrapper .cinema-logo {
-          height: 500px; } }
-      .cinema-container .cinema-wrapper .cinema-logo ul {
-        margin: 0;
-        list-style: none;
-        display: block; }
-        .cinema-container .cinema-wrapper .cinema-logo ul li {
-          position: relative;
-          width: 100%;
-          height: 90px;
-          padding: 20px;
-          cursor: pointer;
-          opacity: 0.6; }
-          .cinema-container .cinema-wrapper .cinema-logo ul li::after {
-            position: absolute;
-            bottom: 0;
-            left: 50%;
-            transform: translate(-50%, 0);
-            content: '';
-            width: 70%;
-            border: 1px solid #cececf; }
-          @media screen and (max-width: 600px) {
-            .cinema-container .cinema-wrapper .cinema-logo ul li {
-              padding: 10px;
-              height: 70px; } }
-          @media screen and (max-width: 400px) {
-            .cinema-container .cinema-wrapper .cinema-logo ul li {
-              height: 60px; } }
-        .cinema-container .cinema-wrapper .cinema-logo ul .active-link {
-          opacity: 1; }
-    .cinema-container .cinema-wrapper .cinema-info {
-      width: 400px;
-      height: 700px;
-      border-left: 1px solid #cececf;
-      overflow-y: scroll; }
-      @media screen and (max-width: 600px) {
-        .cinema-container .cinema-wrapper .cinema-info {
-          width: 100%;
-          height: 500px; } }
-      .cinema-container .cinema-wrapper .cinema-info-container {
-        padding: 20px;
-        position: relative;
-        cursor: pointer;
-        opacity: 0.7; }
-        @media screen and (max-width: 768px) {
-          .cinema-container .cinema-wrapper .cinema-info-container {
-            padding: 10px; } }
-      .cinema-container .cinema-wrapper .cinema-info-active {
-        padding: 20px;
-        position: relative;
-        cursor: pointer;
-        opacity: 1; }
-        @media screen and (max-width: 768px) {
-          .cinema-container .cinema-wrapper .cinema-info-active {
-            padding: 10px; } }
-      .cinema-container .cinema-wrapper .cinema-info-wrapper {
-        display: flex;
-        border-bottom: 1px solid #cececf;
-        padding-bottom: 20px; }
-        @media screen and (max-width: 400px) {
-          .cinema-container .cinema-wrapper .cinema-info-wrapper {
-            padding-bottom: 10px; }
-            .cinema-container .cinema-wrapper .cinema-info-wrapper img {
-              display: none; } }
-      .cinema-container .cinema-wrapper .cinema-info-content {
-        margin-left: 10px; }
-        .cinema-container .cinema-wrapper .cinema-info-content p {
-          overflow: hidden;
-          text-overflow: ellipsis;
-          margin: 0; }
-          .cinema-container .cinema-wrapper .cinema-info-content p span:first-child {
-            color: #01bf71; }
-          @media screen and (max-width: 768px) {
-            .cinema-container .cinema-wrapper .cinema-info-content p span {
-              font-size: 12px; } }
-          @media screen and (max-width: 768px) {
-            .cinema-container .cinema-wrapper .cinema-info-content p {
-              width: unset;
-              overflow: unset;
-              text-overflow: unset; } }
-        .cinema-container .cinema-wrapper .cinema-info-content .text-bold {
-          font-weight: 600; }
-        .cinema-container .cinema-wrapper .cinema-info-content a {
-          text-decoration: none;
-          color: #fb4226; }
-      .cinema-container .cinema-wrapper .cinema-info::-webkit-scrollbar {
-        width: 5px;
-        height: 5px; }
-      .cinema-container .cinema-wrapper .cinema-info::-webkit-scrollbar-thumb {
-        background-color: #01bf71; }
-      .cinema-container .cinema-wrapper .cinema-info::-webkit-scrollbar-track {
-        -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-        background-color: #F5F5F5; }
-    .cinema-container .cinema-wrapper .cinema-showtime {
+    height: 90px; }
+    .cinema__detail__logo {
+      width: 90px;
+      border: 1px solid #ddd;
+      display: flex;
+      justify-content: center;
+      align-items: center; }
+    .cinema__detail img {
+      width: 50px; }
+    .cinema__detail__info {
+      display: flex;
       width: 100%;
-      height: 700px;
-      border-left: 1px solid #cececf;
-      overflow-y: scroll; }
-      @media screen and (max-width: 600px) {
-        .cinema-container .cinema-wrapper .cinema-showtime {
-          display: none; } }
-      .cinema-container .cinema-wrapper .cinema-showtime::-webkit-scrollbar {
-        width: 5px;
-        height: 5px; }
-      .cinema-container .cinema-wrapper .cinema-showtime::-webkit-scrollbar-thumb {
-        background-color: #01bf71; }
-      .cinema-container .cinema-wrapper .cinema-showtime::-webkit-scrollbar-track {
-        -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-        background-color: #F5F5F5; }
-      .cinema-container .cinema-wrapper .cinema-showtime-container {
-        padding: 0 20px 20px 20px;
-        position: relative; }
-        @media screen and (max-width: 768px) {
-          .cinema-container .cinema-wrapper .cinema-showtime-container {
-            padding: unset;
-            padding-left: 5px; } }
-      .cinema-container .cinema-wrapper .cinema-showtime-wrapper {
-        border-bottom: 1px solid #cececf;
-        display: flex;
-        padding: 20px 0; }
-      .cinema-container .cinema-wrapper .cinema-showtime-content {
-        margin-left: 10px; }
-        .cinema-container .cinema-wrapper .cinema-showtime-content h5 {
-          font-weight: 600; }
-          @media screen and (max-width: 768px) {
-            .cinema-container .cinema-wrapper .cinema-showtime-content h5 {
-              font-size: 18px; } }
-
-.cinema-modal {
-  display: none;
-  width: 400px;
-  height: 400px;
-  background: white;
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  overflow-y: scroll;
-  z-index: 900; }
-  .cinema-modal img {
-    height: 50px;
-    width: 50px; }
-  .cinema-modal::-webkit-scrollbar {
-    width: 5px;
-    height: 5px; }
-  .cinema-modal::-webkit-scrollbar-thumb {
-    background-color: #01bf71; }
-  .cinema-modal::-webkit-scrollbar-track {
-    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-    background-color: #F5F5F5; }
-  @media screen and (max-width: 600px) {
-    .cinema-modal {
-      display: unset; } }
-  @media screen and (max-width: 450px) {
-    .cinema-modal {
-      width: 300px; } }
-  @media screen and (max-width: 350px) {
-    .cinema-modal {
-      width: 250px; } }
-  .cinema-modal .cinema-showtime-container {
-    padding: 0px 20px 20px 20px; }
-  .cinema-modal .cinema-showtime-wrapper {
-    display: flex;
-    border-bottom: 1px solid #cececf;
-    padding: 10px 0; }
-    .cinema-modal .cinema-showtime-wrapper .cinema-showtime-content {
-      margin-left: 5px; }
-      .cinema-modal .cinema-showtime-wrapper .cinema-showtime-content h5 {
+      border: 1px solid #ddd;
+      border-left: none;
+      padding: 15px;
+      padding-left: 20px; }
+      .cinema__detail__info h5 {
         font-size: 14px;
-        font-weight: 600; }
-      .cinema-modal .cinema-showtime-wrapper .cinema-showtime-content button {
+        color: #000; }
+      .cinema__detail__info span {
+        color: #fb4226; }
+      .cinema__detail__info p {
         font-size: 12px;
-        padding: 3px;
-        width: 65px; }
-
-.modal-close {
-  display: none;
-  position: fixed;
-  top: 13%;
-  right: 10%;
-  z-index: 100;
-  cursor: pointer; }
-  @media screen and (max-width: 600px) {
-    .modal-close {
-      display: unset; } }
-  .modal-close .close-icon {
-    color: white;
-    font-size: 25px; }
-
-.overlay {
-  display: none; }
-  @media screen and (max-width: 600px) {
-    .overlay {
-      display: unset;
-      position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background: rgba(0, 0, 0, 0.8);
-      z-index: 5; } }
+        color: #9b9b9b;
+        margin: 0; }
+      .cinema__detail__info a {
+        font-size: 12px;
+        color: #fb4226;
+        text-decoration: none; }
+    .cinema__detail__info:hover {
+      opacity: 0.5; }
+  .cinema__showtime {
+    background: #fff;
+    padding: 20px 15px 17px 20px;
+    border: 1px solid #ddd;
+    height: 700px;
+    overflow-y: scroll; }
+    .cinema__showtime hr {
+      border-top: 1px solid #ddd; }
+    .cinema__showtime__title {
+      display: flex; }
+      .cinema__showtime__title img {
+        width: 50px;
+        height: 50px; }
+      .cinema__showtime__title__content {
+        padding: 6px 0 0 20px; }
+        .cinema__showtime__title__content span {
+          background-color: #108f3e;
+          color: #ffffff;
+          padding: 0px 10px;
+          border-radius: 4px; }
+        .cinema__showtime__title__content h5 {
+          font-size: 14px;
+          color: #000;
+          font-weight: 600; }
+        .cinema__showtime__title__content p {
+          font-size: 12px;
+          color: #9b9b9b;
+          font-weight: 600; }
+    .cinema__showtime__slot {
+      opacity: 0.5; }
+      .cinema__showtime__slot__title {
+        font-size: 16px;
+        color: #000;
+        font-weight: 600; }
+      .cinema__showtime__slot button {
+        background-color: rgba(246, 246, 246, 0.5);
+        border-radius: 7px;
+        border: 1px solid #e4e4e4;
+        margin-right: 10px; }
+      .cinema__showtime__slot a {
+        text-decoration: none;
+        color: #9b9b9b;
+        font-size: 14px; }
+      .cinema__showtime__slot span {
+        font-size: 16px;
+        color: #108f3e;
+        font-weight: 600; }
+    .cinema__showtime__slot:hover {
+      opacity: 1; }
+  .cinema__showtime:hover::-webkit-scrollbar {
+    width: 3px;
+    background-color: lightgrey; }
+  @media screen and (max-width: 768px) {
+    .cinema__detail {
+      height: 70px; }
+      .cinema__detail__logo {
+        width: 70px; }
+      .cinema__detail img {
+        width: 40px; } }
+  @media screen and (max-width: 586px) {
+    .cinema__detail {
+      height: 60px; }
+      .cinema__detail__logo {
+        width: 70px; }
+      .cinema__detail img {
+        width: 40px; }
+      .cinema__detail__info p {
+        display: none; } }
 
 .footer-container {
   background-color: #101522; }
@@ -946,8 +813,8 @@ span {
       display: flex;
       align-items: center; }
       .detail__title__left img {
-        width: 100%;
         max-height: 25vw;
+        object-fit: cover;
         border-radius: 10px; }
     .detail__title__center {
       display: flex;
@@ -1171,9 +1038,14 @@ span {
   overflow: hidden;
   background: linear-gradient(180deg, #019356 0%, #0ac97a 100%); }
   .signin-container .form-wrapper {
+    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center; }
+    @media screen and (max-width: 400px) {
+      .signin-container .form-wrapper {
+        height: 80%;
+        margin-top: 25px; } }
     .signin-container .form-wrapper .signin-icon {
       margin-left: 32px;
       margin-top: 32px;
@@ -1186,14 +1058,10 @@ span {
           margin-left: 16px;
           margin-top: 8px; } }
     .signin-container .form-wrapper .form-content {
-      height: 80%;
+      height: 100%;
       display: flex;
       flex-direction: column;
       justify-content: center; }
-      .signin-container .form-wrapper .form-content p {
-        color: #ff0000;
-        font-size: 12px;
-        margin: 0; }
       @media screen and (max-width: 480px) {
         .signin-container .form-wrapper .form-content {
           padding: 10px; } }
@@ -1205,14 +1073,14 @@ span {
         z-index: 1;
         display: grid;
         margin: 0 auto;
-        padding: 60px 32px;
-        border-radius: 10px;
-        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.9); }
+        padding: 80px 32px;
+        border-radius: 4px;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.9); }
         @media screen and (max-width: 400px) {
           .signin-container .form-wrapper .form-content form {
             padding: 32px 32px; } }
         .signin-container .form-wrapper .form-content form h1 {
-          margin-bottom: 30px;
+          margin-bottom: 40px;
           color: #fff;
           font-size: 20px;
           font-weight: 400;
@@ -1272,87 +1140,59 @@ span {
           margin-left: 16px;
           margin-top: 8px;
           font-size: 25px; } }
-    .signup-container .signup-wrapper .signup-success-container {
-      background: #010101;
-      min-height: 70vh;
-      text-align: center;
-      padding: 30px; }
-      .signup-container .signup-wrapper .signup-success-container p {
-        color: #01bf71;
-        font-weight: 700;
-        font-size: 32px; }
-      .signup-container .signup-wrapper .signup-success-container .signup-success-img img {
-        width: 200px;
-        height: 200px; }
-      .signup-container .signup-wrapper .signup-success-container .signup-success-redirect {
-        display: flex;
-        flex-direction: column; }
-        .signup-container .signup-wrapper .signup-success-container .signup-success-redirect .redirect-link-1 {
-          margin-bottom: 20px; }
-  .signup-container .form-wrapper {
-    margin-top: 20px; }
-    .signup-container .form-wrapper p {
-      color: #ff0000;
-      font-size: 12px;
-      margin-top: 8px; }
-    .signup-container .form-wrapper form {
-      background: #010101;
-      border-radius: 10px;
-      box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.9);
-      max-width: 100%;
-      padding: 30px 30px 80px 30px; }
-      .signup-container .form-wrapper form .form-col {
-        padding: 0 30px; }
-        @media screen and (max-width: 400px) {
-          .signup-container .form-wrapper form .form-col {
-            padding: unset; } }
-      .signup-container .form-wrapper form h1 {
-        margin-bottom: 30px;
-        color: #fff;
-        font-size: 20px;
-        font-weight: 400;
-        text-align: center; }
-      .signup-container .form-wrapper form label {
-        margin-bottom: 8px;
-        font-size: 14px;
-        color: #fff; }
-      .signup-container .form-wrapper form input {
-        padding: 16px 16px;
-        border: none;
-        border-radius: 4px; }
-      .signup-container .form-wrapper form small {
-        color: red; }
-      .signup-container .form-wrapper form .form-content {
-        padding: 10px; }
-      .signup-container .form-wrapper form button {
-        border-radius: 50px;
-        background: #01bf71;
-        white-space: nowrap;
-        padding: 10px 22px;
-        color: #010606;
-        font-size: 16px;
-        outline: none;
-        border: none;
-        cursor: pointer;
+  .signup-container .form-wrapper form {
+    background: #010101;
+    max-width: 100%;
+    padding: 30px 30px 30px 30px; }
+    .signup-container .form-wrapper form h1 {
+      margin-bottom: 30px;
+      color: #fff;
+      font-size: 20px;
+      font-weight: 400;
+      text-align: center; }
+    .signup-container .form-wrapper form label {
+      margin-bottom: 8px;
+      font-size: 14px;
+      color: #fff; }
+    .signup-container .form-wrapper form input {
+      padding: 16px 16px;
+      border: none;
+      border-radius: 4px; }
+    .signup-container .form-wrapper form small {
+      color: red; }
+    .signup-container .form-wrapper form .form-content {
+      padding: 10px; }
+    .signup-container .form-wrapper form .form-col2 {
+      position: relative; }
+    .signup-container .form-wrapper form button {
+      border-radius: 50px;
+      background: #01bf71;
+      white-space: nowrap;
+      padding: 10px 22px;
+      color: #010606;
+      font-size: 16px;
+      outline: none;
+      border: none;
+      cursor: pointer;
+      transition: all 0.2s ease-in-out;
+      text-decoration: none;
+      position: absolute;
+      left: 50%;
+      transform: translate(-50%, 0); }
+      .signup-container .form-wrapper form button:hover {
         transition: all 0.2s ease-in-out;
-        text-decoration: none;
-        position: absolute;
-        left: 50%;
-        transform: translate(-50%, 0); }
-        .signup-container .form-wrapper form button:hover {
-          transition: all 0.2s ease-in-out;
-          background: #fff;
-          color: #010606; }
-      @media screen and (max-width: 576px) {
-        .signup-container .form-wrapper form {
-          padding: 10px 10px 60px 10px; }
-          .signup-container .form-wrapper form h1 {
-            font-size: 16px;
-            margin: 20px 0; }
-          .signup-container .form-wrapper form label {
-            font-size: 12px; }
-          .signup-container .form-wrapper form .form-content {
-            padding: 0 20px; } }
+        background: #fff;
+        color: #010606; }
+    @media screen and (max-width: 576px) {
+      .signup-container .form-wrapper form {
+        padding: 10px 10px 60px 10px; }
+        .signup-container .form-wrapper form h1 {
+          font-size: 16px;
+          margin: 20px 0; }
+        .signup-container .form-wrapper form label {
+          font-size: 12px; }
+        .signup-container .form-wrapper form .form-content {
+          padding: 0 20px; } }
   @media screen and (max-width: 576px) {
     .signup-container {
       position: unset; } }

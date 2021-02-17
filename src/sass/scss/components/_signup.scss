@@ -1,6 +1,5 @@
 .signup-container {
     min-height: 100vh;
-    position: fixed;
     bottom: 0;
     left: 0;
     right: 0;
@@ -22,12 +21,50 @@
                 font-size: 25px;
             }
         }
+        .signup-success-container {
+            background: #010101;
+            min-height: 70vh;
+            text-align: center;
+            padding: 30px;
+            p {
+                color: #01bf71;
+                font-weight: 700;
+                font-size: 32px;
+            }
+            .signup-success-img {
+                img {
+                    width: 200px;
+                    height: 200px;
+                }
+            }
+            .signup-success-redirect {
+                display: flex;
+                flex-direction: column;
+                .redirect-link-1 {
+                    margin-bottom: 20px;
+                }
+            }
+        }
     }
     .form-wrapper {
+        margin-top: 20px;
+        p {
+            color: #ff0000;
+            font-size: 12px;
+            margin-top: 8px;
+        }
         form {
             background: #010101;
+            border-radius: 10px;
+            box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.9);
             max-width: 100%;
-            padding: 30px 30px 5px 30px;
+            padding: 30px 30px 80px 30px;
+            .form-col {
+                padding: 0 30px;
+                @media screen and (max-width: 400px) {
+                    padding: unset;
+                }
+            }
             h1 {
                 margin-bottom: 30px;
                 color: #fff;
@@ -50,9 +87,6 @@
             }
             .form-content {
                 padding: 10px;
-            }
-            .form-col2 {
-                position: relative;
             }
             button {
                 @include buttonHomePage(16px, #010606, #01bf71, 10px, 22px);

@@ -1,5 +1,5 @@
 import React from 'react'
-import Sidebar from '../../components/Sidebar/Sidebar'
+import Sidebar from '../../components/Sidebar/Sidebar.jsx'
 import Navbar from '../../components/Navbar/Navbar'
 import { useState } from 'react'
 import HeroSection from '../../components/HeroSection/HeroSection'
@@ -19,7 +19,7 @@ const TrangChu = (props) => {
 
     return (
         <div className="home-page">
-            <Sidebar isOpen={isOpen} toggle={toggle}></Sidebar>
+            <Sidebar isOpen={isOpen} toggle={toggle} />
             <Navbar toggle={toggle} ></Navbar>
             <HeroSection></HeroSection>
             <HomeContent></HomeContent>

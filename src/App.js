@@ -4,18 +4,19 @@ import React, { Fragment } from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 
 // import css
-import './sass/css/style.css';
+
 import './App.css';
 
 // import pages
 import TrangChu from './pages/TrangChu/TrangChu';
-import Signin from './pages/Sign-in/Signin';
+import Signin from './pages/Sign-in/Signin.jsx';
 import ChiTietPhim from './pages/ChiTietPhim/ChiTietPhim';
-import SignupPage from './pages/Sign-up/SignupPage';
+import SignupPage from './pages/Sign-up/SignupPage.jsx';
 import DatVe from './components/DatVe/DatVe';
 
 
 function App() {
+    
     return ( 
         <Fragment>
             <Router basename={process.env.PUBLIC_URL}>

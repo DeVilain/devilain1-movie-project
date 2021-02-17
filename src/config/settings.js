@@ -9,3 +9,7 @@ export const domain = 'https://movie0706.cybersoft.edu.vn';
 export const groupID = 'GP02';
 
 export const groupID2 = 'GP01';
+
+export const maHeThongRap = 'BHDStar'
+
+export const maLichChieu = 'maLichChieu';
