@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/devilain1-movie-project/static/css/main.4557d174.chunk.css",
+    "main.js": "/devilain1-movie-project/static/js/main.607af195.chunk.js",
+    "main.js.map": "/devilain1-movie-project/static/js/main.607af195.chunk.js.map",
+    "runtime-main.js": "/devilain1-movie-project/static/js/runtime-main.2bd10331.js",
+    "runtime-main.js.map": "/devilain1-movie-project/static/js/runtime-main.2bd10331.js.map",
+    "static/js/2.2fbd713a.chunk.js": "/devilain1-movie-project/static/js/2.2fbd713a.chunk.js",
+    "static/js/2.2fbd713a.chunk.js.map": "/devilain1-movie-project/static/js/2.2fbd713a.chunk.js.map",
+    "index.html": "/devilain1-movie-project/index.html",
+    "precache-manifest.ef4aaba8f48016632ca2228f62937fa6.js": "/devilain1-movie-project/precache-manifest.ef4aaba8f48016632ca2228f62937fa6.js",
+    "service-worker.js": "/devilain1-movie-project/service-worker.js",
+    "static/css/main.4557d174.chunk.css.map": "/devilain1-movie-project/static/css/main.4557d174.chunk.css.map",
+    "static/js/2.2fbd713a.chunk.js.LICENSE.txt": "/devilain1-movie-project/static/js/2.2fbd713a.chunk.js.LICENSE.txt",
+    "static/media/svg-1.svg": "/devilain1-movie-project/static/media/svg-1.794fec86.svg",
+    "static/media/svg-2.svg": "/devilain1-movie-project/static/media/svg-2.f48e5867.svg",
+    "static/media/svg-3.svg": "/devilain1-movie-project/static/media/svg-3.3895a74e.svg",
+    "static/media/video2.mp4": "/devilain1-movie-project/static/media/video2.d1e95708.mp4"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.2bd10331.js",
+    "static/js/2.2fbd713a.chunk.js",
+    "static/css/main.4557d174.chunk.css",
+    "static/js/main.607af195.chunk.js"
+  ]
+}
