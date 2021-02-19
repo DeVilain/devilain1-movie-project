@@ -3,7 +3,7 @@ import Sidebar from '../../components/Sidebar/Sidebar.jsx'
 import Navbar from '../../components/Navbar/Navbar'
 import { useState } from 'react'
 import HeroSection from '../../components/HeroSection/HeroSection'
-import Footer from '../../components/Footer/Footer'
+import Footer from '../../components/Footer/Footer.jsx'
 import HomeContent from '../../components/Contents/HomeContent'
 
 

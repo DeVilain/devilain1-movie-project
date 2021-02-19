@@ -22,10 +22,20 @@
         margin: 0;
         color: rgb(148, 148, 148);
     }
-    button {
-        padding: 10px;
-        font-size: 14px;
+    .showtime__link {
+        display: inline-block;
         width: 80px;
+        border-radius: 50px;
+        background: rgb(1, 191, 113);
+        white-space: nowrap;
+        padding: 10px;
+        color: rgb(1, 6, 6);
+        font-size: 14px;
+        outline: none;
+        border: none;
+        cursor: pointer;
+        transition: all 0.2s ease-in-out;
+        text-decoration: none;
         margin: 5px 0 0 5px;
         @media screen and (max-width: 768px) {
             font-size: 13px;
@@ -257,11 +267,22 @@
                 font-size: 14px;
                 font-weight: 600;
             }
-            button {
-                font-size: 12px;
-                padding: 3px;
-                width: 65px;
-            }
+        }
+        .showtime__link {
+            font-size: 12px;
+            padding: 3px;
+            width: 65px;
+            display: inline-block;
+            border-radius: 50px;
+            background: rgb(1, 191, 113);
+            white-space: nowrap;
+            color: rgb(1, 6, 6);
+            outline: none;
+            border: none;
+            cursor: pointer;
+            transition: all 0.2s ease-in-out;
+            text-decoration: none;
+            margin: 3px 0 0 3px;
         }
     }
 }

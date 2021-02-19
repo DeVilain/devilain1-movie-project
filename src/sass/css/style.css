@@ -591,13 +591,23 @@ button {
   .cinema-container p {
     margin: 0;
     color: #949494; }
-  .cinema-container button {
-    padding: 10px;
-    font-size: 14px;
+  .cinema-container .showtime__link {
+    display: inline-block;
     width: 80px;
+    border-radius: 50px;
+    background: #01bf71;
+    white-space: nowrap;
+    padding: 10px;
+    color: #010606;
+    font-size: 14px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    text-decoration: none;
     margin: 5px 0 0 5px; }
     @media screen and (max-width: 768px) {
-      .cinema-container button {
+      .cinema-container .showtime__link {
         font-size: 13px;
         padding: 5px;
         width: 70px; } }
@@ -788,10 +798,21 @@ button {
       .cinema-modal .cinema-showtime-wrapper .cinema-showtime-content h5 {
         font-size: 14px;
         font-weight: 600; }
-      .cinema-modal .cinema-showtime-wrapper .cinema-showtime-content button {
-        font-size: 12px;
-        padding: 3px;
-        width: 65px; }
+    .cinema-modal .cinema-showtime-wrapper .showtime__link {
+      font-size: 12px;
+      padding: 3px;
+      width: 65px;
+      display: inline-block;
+      border-radius: 50px;
+      background: #01bf71;
+      white-space: nowrap;
+      color: #010606;
+      outline: none;
+      border: none;
+      cursor: pointer;
+      transition: all 0.2s ease-in-out;
+      text-decoration: none;
+      margin: 3px 0 0 3px; }
 
 .modal-close {
   display: none;

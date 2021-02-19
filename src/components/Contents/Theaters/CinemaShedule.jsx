@@ -1,8 +1,13 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import moment from 'moment'
+import {useSelector} from 'react-redux'
+import { maLichChieu } from '../../../config/settings';
+import { NavLink } from 'react-router-dom';
 
 function CinemaShedule({ propsDsLichChieu, maCumRapIndex, propsDsCumRap }) {
+
+    const propsUserLoggedIn = useSelector(state => state.QuanLyNguoiDungReducer.nguoiDung);
 
     function renderLichChieu() {
         const lichChieu = propsDsLichChieu?.find(item => item.maCumRap === propsDsCumRap[maCumRapIndex].maCumRap);
@@ -17,8 +22,15 @@ function CinemaShedule({ propsDsLichChieu, maCumRapIndex, propsDsCumRap }) {
                             <h5>{phim.tenPhim}</h5>
                             <div className="movie-schedule">
                                 {phim.lstLichChieuTheoPhim.map(ngayChieu => (
-                                        <button key={ngayChieu.maLichChieu}>{moment(ngayChieu.ngayChieuGioChieu).format("hh:mm A")}</button>
-                                    ))}
+                                    <NavLink to={propsUserLoggedIn.taiKhoan ? `/datve/${ngayChieu.maLichChieu}` : `/signin`}
+                                    className="showtime__link"
+                                    key={ngayChieu.maLichChieu}
+                                    onClick={() => {
+                                        localStorage.setItem(maLichChieu ,JSON.stringify(ngayChieu.maLichChieu))
+                                    }}>
+                                        {moment(ngayChieu.ngayChieuGioChieu).format("hh:mm A")}
+                                    </NavLink>
+                                ))}
 
                             </div>
                         </div>
@@ -26,7 +38,7 @@ function CinemaShedule({ propsDsLichChieu, maCumRapIndex, propsDsCumRap }) {
                 ))
             )
         }
-        return <h4 style={{marginTop: 20}}>Không có suất chiếu</h4>
+        return <h4 style={{ marginTop: 20 }}>Không có suất chiếu</h4>
     }
 
     return (

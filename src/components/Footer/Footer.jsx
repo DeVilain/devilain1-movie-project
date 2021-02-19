@@ -47,7 +47,7 @@ const Footer = () => {
                 <section className="social-media">
                     <div className="social-media-wrapper">
                         <Link className="social-logo" to="/" onClick={toggleHome}>CyberMovies</Link>
-                        <small className="website-rights">CyberMovies @ {new Date().getFullYear()} All rights reserved.</small>
+                        <small className="website-rights">DeVilain-1 @ {new Date().getFullYear()} All rights reserved.</small>
                         <div className="social-icons">
                             <Link to="/" onClick={toggleHome}>
                                 <FaFacebook></FaFacebook>
