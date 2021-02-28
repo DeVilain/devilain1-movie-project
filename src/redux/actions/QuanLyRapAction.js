@@ -1,4 +1,4 @@
-import { groupID, groupID2, maHeThongRap } from "../../config/settings";
+import { groupID2, maHeThongRap } from "../../config/settings";
 import { QuanLyHeThongRapServices } from "../../services/QuanLyHeThongRapServices"
 import { fetch_HeThongRap_CumRap_LichChieu, update_CumRap_LichChieu } from "../types/QuanLyRapTypes"
 import axios from 'axios';
@@ -14,7 +14,7 @@ export const fetch_CinemaInformation_request = () => {
                 const heThongRap_response = responses[0].data;
                 const cumRap_response = responses[1].data;
                 const lichChieu_response = responses[2].data[0].lstCumRap;
-                console.log(lichChieu_response);
+                //console.log(lichChieu_response);
                 dispatch(fetch_CinemaInformation_action(heThongRap_response, cumRap_response, lichChieu_response))
             })).catch(error => {
                 console.log(error);

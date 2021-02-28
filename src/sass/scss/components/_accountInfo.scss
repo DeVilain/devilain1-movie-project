@@ -1,0 +1,99 @@
+.accountInfo-container {
+    background: linear-gradient(to bottom, #323232 0%, #3F3F3F 40%, #1C1C1C 150%), linear-gradient(to top, rgba(255, 255, 255, 0.40) 0%, rgba(0, 0, 0, 0.25) 200%);
+    background-blend-mode: multiply;
+    height: 100vh;
+    position: relative;
+    h2 {
+        font-weight: 600;
+        text-align: center;
+        color: #fff;
+        line-height: 100vh;
+    }
+    h3 {
+        font-weight: 600;
+        text-align: center;
+        margin-bottom: 30px;
+    }
+    label {
+        display: inline-block;
+        font-weight: bold;
+    }
+    .accountInfo-wrapper {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        //display
+        display: flex;
+        // width-height
+        width: 80vw;
+        height: 80vh;
+        //background
+        background-image: linear-gradient(-225deg, #E3FDF5 0%, #FFE6FA 100%);
+        border-radius: 15px;
+        box-shadow: 10px 10px 8px #888888;
+        .accountMenu-container {
+            flex: 1;
+            padding: 20px;
+            border-right: 2px solid rgba(64, 62, 62, .5);
+            .accountMenu-wrapper {
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                .accountAva-container {
+                    flex: 3;
+                    position: relative;
+                    img {
+                        width: 100px;
+                        height: 100px;
+                        border-radius: 50%;
+                        //position
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                    }
+                }
+                .accountMenu-link1 {
+                    flex: 1;
+                    cursor: pointer;
+                }
+                .accountMenu-link2 {
+                    flex: 1;
+                    cursor: pointer;
+                }
+                .accountMenu-logout {
+                    flex: 3;
+                }
+            }
+        }
+        .accountContent-container {
+            flex: 3;
+            padding: 20px;
+            position: relative;
+            .account-loading {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                .spinner-border {
+                    width: 3rem !important;
+                    height: 3rem !important;
+                }
+            }
+            p {
+                margin: 0 0 8px;
+                &:first-child {
+                    margin-top: 8px;
+                }
+            }
+        }
+    }
+}
+
+.acc-active-link {
+    background: green;
+}

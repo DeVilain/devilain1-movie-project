@@ -32,6 +32,7 @@ function CinemaInfo({ maCumRapIndex, propsDsLichChieu, propsDsCumRap, logoImg, s
                         </div>
                     </div>
                 ))}
+                
                 <Modal isOpen={isOpen} setIsOpen={setIsOpen} onClose={() => setIsOpen(false)}>
                     {<CinemaShedule
                         propsDsLichChieu={propsDsLichChieu}
@@ -39,34 +40,18 @@ function CinemaInfo({ maCumRapIndex, propsDsLichChieu, propsDsCumRap, logoImg, s
                         maCumRapIndex={maCumRapIndex}
                     />}
                 </Modal>
-                {/* {danhSachCumRap.map((cumRap, index) => (
-                    <div key={cumRap.maCumRap}
-                        className={isCumRapActive === index ? 'cinema-info-active' : "cinema-info-container"}
-                        onClick={() => {
-                            setCumRapActive(index)
-                            setMaCumRap(cumRap.maCumRap)
-                        }}
-                    >
-                        <div className="cinema-info-wrapper">
-                            <img src={logoImg} alt="" />
-                            <div className="cinema-info-content">
-                                <p className={ isCumRapActive === index ? "text-bold" : ''}>
-                                    <span>{cumRap.tenCumRap} </span>
-
-                                </p>
-                                <p>{cumRap.diaChi}</p>
-                                <a href="">detail</a>
-                            </div>
-                        </div>
-                    </div>
-                ))} */}
+                
             </div>
         </>
     )
 }
 
 CinemaInfo.propTypes = {
-
+    maCumRapIndex: PropTypes.number,
+    propsDsLichChieu: PropTypes.array,
+    propsDsCumRap: PropTypes.array,
+    logoImg: PropTypes.string,
+    cumRapActive: PropTypes.number,
 }
 
 export default CinemaInfo

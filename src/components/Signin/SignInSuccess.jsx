@@ -1,6 +1,5 @@
-import React, { useEffect } from 'react'
-import PropTypes from 'prop-types'
-import { useSelector } from 'react-redux'
+import React from 'react'
+
 import { maLichChieu } from '../../config/settings'
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
@@ -12,16 +11,6 @@ function SignInSuccess(props) {
             return JSON.parse(localStorage.getItem(maLichChieu));
         } return;
     });
-
-    // lấy mã lịch chiếu từ localStorage
-    /* useEffect(() => {
-        function getMaLichChieuFromLocal() {
-            if (localStorage.getItem(maLichChieu)) {
-                setMaLichChieuLocal(JSON.parse(localStorage.getItem(maLichChieu)));
-            }
-        }
-        getMaLichChieuFromLocal();
-    }) */
 
     return (
         <div className="signup-container">
@@ -43,9 +32,6 @@ function SignInSuccess(props) {
     )
 }
 
-SignInSuccess.propTypes = {
-    //maLichChieu: PropTypes.object,
-}
 
 export default SignInSuccess
 

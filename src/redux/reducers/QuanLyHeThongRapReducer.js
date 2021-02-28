@@ -9,7 +9,7 @@ const initialState = {
 export default (state = initialState, action) => {
     switch (action.type) {
         case fetch_HeThongRap_CumRap_LichChieu:
-            console.log(action.dsLichChieu);
+            //console.log(action.dsLichChieu);
             return {...state, danhSachHeThongRap: action.dsHeThongRap, danhSachCumRap: action.dsCumRap, danhSachLichChieu: action.dsLichChieu };
         case update_CumRap_LichChieu:
             return {...state, danhSachCumRap: action.dsCumRapUpdate, danhSachLichChieu: action.dsLichChieuUpdate };

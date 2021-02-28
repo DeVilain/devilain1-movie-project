@@ -1,8 +1,7 @@
-import React, { useEffect, useState } from 'react'
-import { useDispatch, useSelector } from 'react-redux';
+import React, { useState } from 'react'
+import { useDispatch } from 'react-redux';
 import SignIn from '../../components/Signin/index.jsx';
 import SignInSuccess from '../../components/Signin/SignInSuccess.jsx';
-import { maLichChieu } from '../../config/settings.js';
 import { dangNhapAction } from '../../redux/actions/QuanLyNguoiDungAction';
 
 const Signin = (props) => {
@@ -21,7 +20,7 @@ const Signin = (props) => {
     const [errorResponse, setErrorResponse] = useState('');
 
     function dangNhap(user) {
-        dispatch(dangNhapAction(user, props, setErrorResponse, setIsLoginSuccess));
+        dispatch(dangNhapAction(user, setErrorResponse, setIsLoginSuccess));
     }
 
     return (

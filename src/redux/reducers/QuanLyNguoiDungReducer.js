@@ -1,4 +1,4 @@
-import { dang_ky, dang_nhap, dang_xuat } from '../types/QuanLyNguoiDungTypes'
+import { dang_ky, dang_nhap, dang_xuat, getThongTinUser } from '../types/QuanLyNguoiDungTypes'
 import { accessToken, maLichChieu, userLogin, userSignup } from '../../config/settings'
 
 let usLogin = {};
@@ -14,6 +14,7 @@ if (sessionStorage.getItem(userSignup)) {
 const initialState = {
     nguoiDung: usLogin,
     nguoiDangKy: usSignup,
+    thongTinUser: {},
 }
 
 export default (state = initialState, action) => {
@@ -29,6 +30,9 @@ export default (state = initialState, action) => {
         case dang_ky:
             state.nguoiDangKy = action.nguoiDangKy;
             return {...state };
+        case getThongTinUser:
+            console.log(action.accountInfo);
+            return {...state, thongTinUser: action.accountInfo };
         default:
             return state;
     }

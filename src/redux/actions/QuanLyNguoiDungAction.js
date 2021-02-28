@@ -1,8 +1,9 @@
 import axios from 'axios'
-import { dang_ky, dang_nhap } from '../types/QuanLyNguoiDungTypes'
+import { dang_ky, dang_nhap, getThongTinUser } from '../types/QuanLyNguoiDungTypes'
 import { userLogin, accessToken, domain } from '../../config/settings'
+import { QuanLyNguoiDungServices } from '../../services/QuanLyNguoiDungServices'
 
-export const dangNhapAction = ({ taiKhoan, matKhau }, props, setErrorResponse, setIsLoginSuccess) => {
+export const dangNhapAction = ({ taiKhoan, matKhau }, setErrorResponse, setIsLoginSuccess) => {
     return dispatch => {
         axios({
             url: `${domain}/api/QuanLyNguoiDung/DangNhap`,
@@ -48,5 +49,24 @@ export const dangKyAction = ({ taiKhoan, matKhau, email, soDt, maNhom, maLoaiNgu
             console.log(err.response.data);
             setServerError(err.response.data);
         });
+    }
+}
+
+
+export const getThongTinUser_request = (taiKhoan) => {
+    return dispatch => {
+        QuanLyNguoiDungServices.getThongTinTaiKhoan(taiKhoan)
+            .then(res => {
+                console.log(res.data);
+                dispatch(getThongTinUser_action(res.data));
+            })
+            .catch(err => err.response);
+    }
+}
+
+export const getThongTinUser_action = (accountInfo) => {
+    return {
+        type: getThongTinUser,
+        accountInfo,
     }
 }

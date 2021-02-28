@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { domain, groupID, groupID2 } from '../config/settings';
+import { domain, groupID2 } from '../config/settings';
 
 export const QuanLyHeThongRapServices = {
     fetchHeThongRap: () => {

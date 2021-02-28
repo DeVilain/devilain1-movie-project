@@ -6,7 +6,6 @@ import { maLichChieu } from '../../../config/settings';
 import { NavLink } from 'react-router-dom';
 
 function CinemaShedule({ propsDsLichChieu, maCumRapIndex, propsDsCumRap }) {
-
     const propsUserLoggedIn = useSelector(state => state.QuanLyNguoiDungReducer.nguoiDung);
 
     function renderLichChieu() {
@@ -53,7 +52,10 @@ function CinemaShedule({ propsDsLichChieu, maCumRapIndex, propsDsCumRap }) {
 }
 
 CinemaShedule.propTypes = {
-
+    propsDsLichChieu: PropTypes.array,
+    propsDsCumRap: PropTypes.array,
+    maCumRapIndex: PropTypes.number,
+    propsUserLoggedIn: PropTypes.object,
 }
 
 export default CinemaShedule

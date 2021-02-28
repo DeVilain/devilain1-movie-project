@@ -1483,6 +1483,84 @@ span {
   color: #000000;
   font-weight: bold; }
 
+.accountInfo-container {
+  background: linear-gradient(to bottom, #323232 0%, #3F3F3F 40%, #1C1C1C 150%), linear-gradient(to top, rgba(255, 255, 255, 0.4) 0%, rgba(0, 0, 0, 0.25) 200%);
+  background-blend-mode: multiply;
+  height: 100vh;
+  position: relative; }
+  .accountInfo-container h2 {
+    font-weight: 600;
+    text-align: center;
+    color: #fff;
+    line-height: 100vh; }
+  .accountInfo-container h3 {
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 30px; }
+  .accountInfo-container label {
+    display: inline-block;
+    font-weight: bold; }
+  .accountInfo-container .accountInfo-wrapper {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    width: 80vw;
+    height: 80vh;
+    background-image: linear-gradient(-225deg, #E3FDF5 0%, #FFE6FA 100%);
+    border-radius: 15px;
+    box-shadow: 10px 10px 8px #888888; }
+    .accountInfo-container .accountInfo-wrapper .accountMenu-container {
+      flex: 1;
+      padding: 20px;
+      border-right: 2px solid rgba(64, 62, 62, 0.5); }
+      .accountInfo-container .accountInfo-wrapper .accountMenu-container .accountMenu-wrapper {
+        height: 100%;
+        display: flex;
+        flex-direction: column; }
+        .accountInfo-container .accountInfo-wrapper .accountMenu-container .accountMenu-wrapper .accountAva-container {
+          flex: 3;
+          position: relative; }
+          .accountInfo-container .accountInfo-wrapper .accountMenu-container .accountMenu-wrapper .accountAva-container img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%); }
+        .accountInfo-container .accountInfo-wrapper .accountMenu-container .accountMenu-wrapper .accountMenu-link1 {
+          flex: 1;
+          cursor: pointer; }
+        .accountInfo-container .accountInfo-wrapper .accountMenu-container .accountMenu-wrapper .accountMenu-link2 {
+          flex: 1;
+          cursor: pointer; }
+        .accountInfo-container .accountInfo-wrapper .accountMenu-container .accountMenu-wrapper .accountMenu-logout {
+          flex: 3; }
+    .accountInfo-container .accountInfo-wrapper .accountContent-container {
+      flex: 3;
+      padding: 20px;
+      position: relative; }
+      .accountInfo-container .accountInfo-wrapper .accountContent-container .account-loading {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%); }
+        .accountInfo-container .accountInfo-wrapper .accountContent-container .account-loading .spinner-border {
+          width: 3rem !important;
+          height: 3rem !important; }
+      .accountInfo-container .accountInfo-wrapper .accountContent-container p {
+        margin: 0 0 8px; }
+        .accountInfo-container .accountInfo-wrapper .accountContent-container p:first-child {
+          margin-top: 8px; }
+
+.acc-active-link {
+  background: green; }
+
 .blank-section {
   background: #010606;
   height: 200px; }

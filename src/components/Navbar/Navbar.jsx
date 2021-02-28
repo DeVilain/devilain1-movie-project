@@ -11,22 +11,33 @@ const Navbar = ({ toggle }) => {
     // state xử lý hiệu ứng scroll của navbar
     const [scrollNav, setScrollNav] = useState(false);
 
-    // 
+    // flag to handle mount status, prevent the problem that component setState when it is already Unmounted
+    let isMounted = false;
+
+    // props user Logged-in from reducer
     const userLoggedIn = useSelector(state => state.QuanLyNguoiDungReducer.nguoiDung);
 
     const dispatch = useDispatch();
 
 
     const changeBackgroundNav = () => {
-        if (window.scrollY >= 80) {
-            setScrollNav(true);
-        } else {
-            setScrollNav(false);
+        // check if component is mounted, if true => setState, if Unmounted => false => no setState
+        if (isMounted) {
+            if (window.scrollY >= 80) {
+                setScrollNav(true);
+            } else {
+                setScrollNav(false);
+            }
         }
     }
 
     useEffect(() => {
+        isMounted = true;
         window.addEventListener('scroll', changeBackgroundNav);
+        return () => {
+            isMounted = false; // use effect cleanup to set flag false, if unmounted
+            // if the component unomunted => flag turns false, then the component won't setState in changeBackgroundNav()
+        }
     }, []);
 
 

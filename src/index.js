@@ -7,7 +7,6 @@ import { Provider } from 'react-redux';
 import rootReducer from './redux/reducers/rootReducer';
 import thunk from 'redux-thunk';
 import './sass/css/style.css';
-import { accessToken, maLichChieu, userLogin } from './config/settings';
 
 const composeEnhancer = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 

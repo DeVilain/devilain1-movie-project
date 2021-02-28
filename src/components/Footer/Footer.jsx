@@ -47,7 +47,8 @@ const Footer = () => {
                 <section className="social-media">
                     <div className="social-media-wrapper">
                         <Link className="social-logo" to="/" onClick={toggleHome}>CyberMovies</Link>
-                        <small className="website-rights">DeVilain-1 @ {new Date().getFullYear()} All rights reserved.</small>
+                        <small className="website-rights">DeVilain-1 @ {new Date().getFullYear()} All rights reserved. <br /> <i><a target="_blank" href="https://www.youtube.com/channel/UCsKsymTY_4BYR-wytLjex7A"> Contain references to Brian Design</a></i></small>
+
                         <div className="social-icons">
                             <Link to="/" onClick={toggleHome}>
                                 <FaFacebook></FaFacebook>
