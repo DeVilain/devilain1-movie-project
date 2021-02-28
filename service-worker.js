@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/devilain1-movie-project/precache-manifest.17599a9658ffe85322306c2de53a9eef.js"
+  "/devilain1-movie-project/precache-manifest.6dfb0f4479bd46a12d70606deca33247.js"
 );
 
 self.addEventListener('message', (event) => {
