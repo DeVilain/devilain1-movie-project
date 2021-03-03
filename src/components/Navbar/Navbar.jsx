@@ -62,7 +62,7 @@ const Navbar = ({ toggle }) => {
         <>
             <nav className={scrollNav ? 'nav-default' : 'nav-scroll'}>
                 <div className="navbar-container">
-                    <NavLink to="/" onClick={toggleHome} duration={500}><img src="https://cybersoft.edu.vn/wp-content/uploads/2017/03/MIN-OP1.png" alt="" /></NavLink>
+                    <NavLink className="nav-logo" to="/" onClick={toggleHome} duration={500}>CyberMovies</NavLink>
                     <div className="nav-icon">
                         <FaBars onClick={toggle}></FaBars>
                     </div>

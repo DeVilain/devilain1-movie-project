@@ -48,6 +48,11 @@
         justify-self: flex-start;*/
     cursor: pointer;
     height: 40px; }
+  .navbar-container .nav-logo {
+    font-size: 25px;
+    color: #fff;
+    font-weight: 600;
+    text-decoration: none; }
   .navbar-container .nav-icon {
     display: none; }
     .navbar-container .nav-icon svg {
@@ -936,7 +941,8 @@ span {
 
 .website-rights {
   color: #fff;
-  margin-bottom: 16px; }
+  margin-bottom: 16px;
+  text-align: center; }
 
 .social-icons {
   display: flex;
