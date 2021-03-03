@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/devilain1-movie-project/static/css/main.198b67b2.chunk.css",
-    "main.js": "/devilain1-movie-project/static/js/main.bfb25c2d.chunk.js",
-    "main.js.map": "/devilain1-movie-project/static/js/main.bfb25c2d.chunk.js.map",
+    "main.css": "/devilain1-movie-project/static/css/main.19cfc6b0.chunk.css",
+    "main.js": "/devilain1-movie-project/static/js/main.dbbc020c.chunk.js",
+    "main.js.map": "/devilain1-movie-project/static/js/main.dbbc020c.chunk.js.map",
     "runtime-main.js": "/devilain1-movie-project/static/js/runtime-main.2bd10331.js",
     "runtime-main.js.map": "/devilain1-movie-project/static/js/runtime-main.2bd10331.js.map",
     "static/js/2.739658e5.chunk.js": "/devilain1-movie-project/static/js/2.739658e5.chunk.js",
     "static/js/2.739658e5.chunk.js.map": "/devilain1-movie-project/static/js/2.739658e5.chunk.js.map",
     "index.html": "/devilain1-movie-project/index.html",
-    "precache-manifest.6dfb0f4479bd46a12d70606deca33247.js": "/devilain1-movie-project/precache-manifest.6dfb0f4479bd46a12d70606deca33247.js",
+    "precache-manifest.d5eb4652b974f5edf6f71836be6d7644.js": "/devilain1-movie-project/precache-manifest.d5eb4652b974f5edf6f71836be6d7644.js",
     "service-worker.js": "/devilain1-movie-project/service-worker.js",
-    "static/css/main.198b67b2.chunk.css.map": "/devilain1-movie-project/static/css/main.198b67b2.chunk.css.map",
+    "static/css/main.19cfc6b0.chunk.css.map": "/devilain1-movie-project/static/css/main.19cfc6b0.chunk.css.map",
     "static/js/2.739658e5.chunk.js.LICENSE.txt": "/devilain1-movie-project/static/js/2.739658e5.chunk.js.LICENSE.txt",
     "static/media/svg-1.svg": "/devilain1-movie-project/static/media/svg-1.794fec86.svg",
     "static/media/svg-2.svg": "/devilain1-movie-project/static/media/svg-2.f48e5867.svg",
@@ -20,7 +20,7 @@
   "entrypoints": [
     "static/js/runtime-main.2bd10331.js",
     "static/js/2.739658e5.chunk.js",
-    "static/css/main.198b67b2.chunk.css",
-    "static/js/main.bfb25c2d.chunk.js"
+    "static/css/main.19cfc6b0.chunk.css",
+    "static/js/main.dbbc020c.chunk.js"
   ]
 }

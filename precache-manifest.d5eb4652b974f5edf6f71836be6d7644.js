@@ -1,11 +1,11 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "fb18c692ef5a8ad47993df974e6a5415",
+    "revision": "ea79452c18ff2361d975e9d8f0fbb8fb",
     "url": "/devilain1-movie-project/index.html"
   },
   {
-    "revision": "472a9b0c32761bb4d662",
-    "url": "/devilain1-movie-project/static/css/main.198b67b2.chunk.css"
+    "revision": "ce72bd5b21de2c356279",
+    "url": "/devilain1-movie-project/static/css/main.19cfc6b0.chunk.css"
   },
   {
     "revision": "f7c1fb67504a2886e491",
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/devilain1-movie-project/static/js/2.739658e5.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "472a9b0c32761bb4d662",
-    "url": "/devilain1-movie-project/static/js/main.bfb25c2d.chunk.js"
+    "revision": "ce72bd5b21de2c356279",
+    "url": "/devilain1-movie-project/static/js/main.dbbc020c.chunk.js"
   },
   {
     "revision": "ae5a39cc2d07564737ca",
