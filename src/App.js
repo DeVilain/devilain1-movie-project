@@ -15,6 +15,13 @@ import SignupPage from './pages/Sign-up/SignupPage.jsx';
 import DatVe from './components/DatVe/DatVe';
 import { ThongTinTaiKhoanPage } from './pages/ThongTinTaiKhoan/ThongTinTaiKhoanPage';
 
+import AdminTemplate from './template/AdminTemplate/AdminTemplate';
+
+import Admin from './pages/Admin/Admin';
+import MovieListManagement from './pages/Admin/MovieListManagement';
+import UserManagement from './pages/Admin/UserManagement';
+import ShowtimeManagement from './pages/Admin/ShowtimeManagement';
+
 
 function App() {
     
@@ -22,12 +29,19 @@ function App() {
         <Fragment>
             <Router basename={process.env.PUBLIC_URL}>
                 <Switch>
+                    {/* Home */}
                     <Route exact path="/" component={TrangChu}></Route>
                     <Route exact path="/signin" component={Signin}></Route>
                     <Route exact path="/signup" component={SignupPage}></Route>
                     <Route exact path="/chitietphim/:maPhim" component={ChiTietPhim}></Route>
                     <Route exact path="/datve/:maLichChieu" component={DatVe}></Route>
                     <Route exact path="/user" component={ThongTinTaiKhoanPage} />
+
+                    {/* Admin */}
+                    <AdminTemplate exact path="/admin" Component={Admin} />
+                    <AdminTemplate exact path="/admin/movie-list" Component={MovieListManagement} />
+                    <AdminTemplate exact path="/admin/users" Component={UserManagement} />
+                    <AdminTemplate exact path="/admin/showtime" Component={ShowtimeManagement} />
                 </Switch>
             </Router>
         </Fragment>
