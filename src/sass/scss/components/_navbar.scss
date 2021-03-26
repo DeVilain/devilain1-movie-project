@@ -110,19 +110,21 @@
     }
 }
 
-ul {
-    display: flex;
-    padding: 0;
-    margin: 0;
-    align-items: center;
-    list-style: none;
-    text-align: center;
-    margin-right: -22px;
-    @media screen and (max-width: 768px) {
-        display: none;
-    }
-    li {
-        height: 80px;
+.navbar-container {
+    ul {
+        display: flex;
+        padding: 0;
+        margin: 0;
+        align-items: center;
+        list-style: none;
+        text-align: center;
+        margin-right: -22px;
+        @media screen and (max-width: 768px) {
+            display: none;
+        }
+        li {
+            height: 80px;
+        }
     }
 }
 
