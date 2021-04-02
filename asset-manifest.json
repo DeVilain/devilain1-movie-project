@@ -1,27 +1,27 @@
 {
   "files": {
-    "main.css": "/static/css/main.1978e867.chunk.css",
-    "main.js": "/static/js/main.f2be5e4c.chunk.js",
-    "main.js.map": "/static/js/main.f2be5e4c.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.1b485c3a.js",
-    "runtime-main.js.map": "/static/js/runtime-main.1b485c3a.js.map",
-    "static/css/2.98e7ac70.chunk.css": "/static/css/2.98e7ac70.chunk.css",
-    "static/js/2.19a44bb2.chunk.js": "/static/js/2.19a44bb2.chunk.js",
-    "static/js/2.19a44bb2.chunk.js.map": "/static/js/2.19a44bb2.chunk.js.map",
-    "index.html": "/index.html",
-    "static/css/2.98e7ac70.chunk.css.map": "/static/css/2.98e7ac70.chunk.css.map",
-    "static/css/main.1978e867.chunk.css.map": "/static/css/main.1978e867.chunk.css.map",
-    "static/js/2.19a44bb2.chunk.js.LICENSE.txt": "/static/js/2.19a44bb2.chunk.js.LICENSE.txt",
-    "static/media/svg-1.4d170c80.svg": "/static/media/svg-1.4d170c80.svg",
-    "static/media/svg-2.a00fe38c.svg": "/static/media/svg-2.a00fe38c.svg",
-    "static/media/svg-3.5ba2f490.svg": "/static/media/svg-3.5ba2f490.svg",
-    "static/media/video2.f0eba407.mp4": "/static/media/video2.f0eba407.mp4"
+    "main.css": "/devilain1-movie-project/static/css/main.1978e867.chunk.css",
+    "main.js": "/devilain1-movie-project/static/js/main.e44074e2.chunk.js",
+    "main.js.map": "/devilain1-movie-project/static/js/main.e44074e2.chunk.js.map",
+    "runtime-main.js": "/devilain1-movie-project/static/js/runtime-main.9ac405dc.js",
+    "runtime-main.js.map": "/devilain1-movie-project/static/js/runtime-main.9ac405dc.js.map",
+    "static/css/2.98e7ac70.chunk.css": "/devilain1-movie-project/static/css/2.98e7ac70.chunk.css",
+    "static/js/2.0f17d6e8.chunk.js": "/devilain1-movie-project/static/js/2.0f17d6e8.chunk.js",
+    "static/js/2.0f17d6e8.chunk.js.map": "/devilain1-movie-project/static/js/2.0f17d6e8.chunk.js.map",
+    "index.html": "/devilain1-movie-project/index.html",
+    "static/css/2.98e7ac70.chunk.css.map": "/devilain1-movie-project/static/css/2.98e7ac70.chunk.css.map",
+    "static/css/main.1978e867.chunk.css.map": "/devilain1-movie-project/static/css/main.1978e867.chunk.css.map",
+    "static/js/2.0f17d6e8.chunk.js.LICENSE.txt": "/devilain1-movie-project/static/js/2.0f17d6e8.chunk.js.LICENSE.txt",
+    "static/media/svg-1.4d170c80.svg": "/devilain1-movie-project/static/media/svg-1.4d170c80.svg",
+    "static/media/svg-2.a00fe38c.svg": "/devilain1-movie-project/static/media/svg-2.a00fe38c.svg",
+    "static/media/svg-3.5ba2f490.svg": "/devilain1-movie-project/static/media/svg-3.5ba2f490.svg",
+    "static/media/video2.f0eba407.mp4": "/devilain1-movie-project/static/media/video2.f0eba407.mp4"
   },
   "entrypoints": [
-    "static/js/runtime-main.1b485c3a.js",
+    "static/js/runtime-main.9ac405dc.js",
     "static/css/2.98e7ac70.chunk.css",
-    "static/js/2.19a44bb2.chunk.js",
+    "static/js/2.0f17d6e8.chunk.js",
     "static/css/main.1978e867.chunk.css",
-    "static/js/main.f2be5e4c.chunk.js"
+    "static/js/main.e44074e2.chunk.js"
   ]
 }
