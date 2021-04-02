@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/devilain1-movie-project/static/css/main.1978e867.chunk.css",
-    "main.js": "/devilain1-movie-project/static/js/main.e44074e2.chunk.js",
-    "main.js.map": "/devilain1-movie-project/static/js/main.e44074e2.chunk.js.map",
+    "main.css": "/devilain1-movie-project/static/css/main.f391124c.chunk.css",
+    "main.js": "/devilain1-movie-project/static/js/main.576cc6f0.chunk.js",
+    "main.js.map": "/devilain1-movie-project/static/js/main.576cc6f0.chunk.js.map",
     "runtime-main.js": "/devilain1-movie-project/static/js/runtime-main.9ac405dc.js",
     "runtime-main.js.map": "/devilain1-movie-project/static/js/runtime-main.9ac405dc.js.map",
     "static/css/2.98e7ac70.chunk.css": "/devilain1-movie-project/static/css/2.98e7ac70.chunk.css",
-    "static/js/2.0f17d6e8.chunk.js": "/devilain1-movie-project/static/js/2.0f17d6e8.chunk.js",
-    "static/js/2.0f17d6e8.chunk.js.map": "/devilain1-movie-project/static/js/2.0f17d6e8.chunk.js.map",
+    "static/js/2.a0588020.chunk.js": "/devilain1-movie-project/static/js/2.a0588020.chunk.js",
+    "static/js/2.a0588020.chunk.js.map": "/devilain1-movie-project/static/js/2.a0588020.chunk.js.map",
     "index.html": "/devilain1-movie-project/index.html",
     "static/css/2.98e7ac70.chunk.css.map": "/devilain1-movie-project/static/css/2.98e7ac70.chunk.css.map",
-    "static/css/main.1978e867.chunk.css.map": "/devilain1-movie-project/static/css/main.1978e867.chunk.css.map",
-    "static/js/2.0f17d6e8.chunk.js.LICENSE.txt": "/devilain1-movie-project/static/js/2.0f17d6e8.chunk.js.LICENSE.txt",
+    "static/css/main.f391124c.chunk.css.map": "/devilain1-movie-project/static/css/main.f391124c.chunk.css.map",
+    "static/js/2.a0588020.chunk.js.LICENSE.txt": "/devilain1-movie-project/static/js/2.a0588020.chunk.js.LICENSE.txt",
     "static/media/svg-1.4d170c80.svg": "/devilain1-movie-project/static/media/svg-1.4d170c80.svg",
     "static/media/svg-2.a00fe38c.svg": "/devilain1-movie-project/static/media/svg-2.a00fe38c.svg",
     "static/media/svg-3.5ba2f490.svg": "/devilain1-movie-project/static/media/svg-3.5ba2f490.svg",
@@ -20,8 +20,8 @@
   "entrypoints": [
     "static/js/runtime-main.9ac405dc.js",
     "static/css/2.98e7ac70.chunk.css",
-    "static/js/2.0f17d6e8.chunk.js",
-    "static/css/main.1978e867.chunk.css",
-    "static/js/main.e44074e2.chunk.js"
+    "static/js/2.a0588020.chunk.js",
+    "static/css/main.f391124c.chunk.css",
+    "static/js/main.576cc6f0.chunk.js"
   ]
 }
