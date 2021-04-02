@@ -31,7 +31,7 @@ function App() {
   return (
     <Fragment>
       {console.log(process.env.PUBLIC_URL)}
-      <HashRouter basename={process.env.PUBLIC_URL}>
+      <HashRouter>
         <Switch>
           {/* Home */}
           <Route exact path="/" component={TrangChu}></Route>
