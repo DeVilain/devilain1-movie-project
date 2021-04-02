@@ -18,7 +18,7 @@ const AdminTemplate = ({ Component, ...rest }) => {
     return <Route {...rest} render={(props) => {
         return (adminAuth === 'QuanTri') ? <AdminComponent adminName={adminName}>
             <Component {...props} />
-        </AdminComponent> : <Redirect to="" />
+        </AdminComponent> : <Redirect to={{pathname:"/signin", state: {from: props.location}}} />
     }}
     />
 }
