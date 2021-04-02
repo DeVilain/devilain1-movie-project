@@ -23,7 +23,7 @@ const TheaterSection = () => {
     // dispatch action call API để lấy danh sách hệ thống rạp
     useEffect(() => {
         dispatch(fetch_CinemaInformation_request());
-    }, []);
+    }, [dispatch]);
 
     // state lưu trữ logo cụm rạp
     const [logoImg, setLogoImg] = useState("http://movie0706.cybersoft.edu.vn/hinhanh/bhd-star-cineplex.png");

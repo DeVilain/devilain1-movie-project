@@ -2,7 +2,6 @@ import React, { Fragment } from "react";
 
 // import router-dom
 import {
-  BrowserRouter as Router,
   HashRouter,
   Route,
   Switch,
@@ -30,7 +29,7 @@ import ShowtimeManagement from "./pages/Admin/ShowtimeManagement";
 function App() {
   return (
     <Fragment>
-      {console.log(process.env.PUBLIC_URL)}
+      
       <HashRouter>
         <Switch>
           {/* Home */}

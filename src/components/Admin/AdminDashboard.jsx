@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 
 import { Layout } from 'antd';
 
@@ -38,6 +38,7 @@ const AdminDashboard = ({ content, adminName }) => {
                             <NavLink
                                 to="/admin/movie-list"
                                 activeClassName="active"
+                                replace
                             >Quản lý phim</NavLink>
                         </li>
                         <li
@@ -46,7 +47,7 @@ const AdminDashboard = ({ content, adminName }) => {
                             <NavLink
                                 to="/admin/users"
                                 activeClassName="active"
-                                
+                                replace
                             >Quản lý user</NavLink>
                         </li>
                         <li
@@ -56,7 +57,7 @@ const AdminDashboard = ({ content, adminName }) => {
                             <NavLink
                                 to="/admin/showtime"
                                 activeClassName="active"
-                                
+                                replace
                             >Quản lý lịch chiếu</NavLink>
                         </li>
                     </ul>

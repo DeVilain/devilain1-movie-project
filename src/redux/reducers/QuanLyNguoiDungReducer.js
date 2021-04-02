@@ -17,7 +17,7 @@ const initialState = {
     thongTinUser: {},
 }
 
-export default (state = initialState, action) => {
+export const QuanLyNguoiDungReducer = (state = initialState, action) => {
     switch (action.type) {
         case dang_nhap:
             state.nguoiDung = action.nguoiDung;

@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react'
-import PropTypes from 'prop-types'
+
 import { userLogin } from '../../config/settings'
 import { useDispatch, useSelector } from 'react-redux'
 import { getThongTinUser_request } from '../../redux/actions/QuanLyNguoiDungAction';
@@ -9,7 +9,7 @@ function AccountContent({ active }) {
     const dispatch = useDispatch();
 
     const thongTinTaiKhoan = useSelector(state => state.QuanLyNguoiDungReducer.thongTinUser);
-    //console.log(thongTinTaiKhoan);
+    console.log(thongTinTaiKhoan);
 
     function renderAccountInfo() {
         if (thongTinTaiKhoan.taiKhoan) {
@@ -71,7 +71,7 @@ function AccountContent({ active }) {
             return;
         }
         getAccountInfo();
-    }, []);
+    }, [dispatch]);
 
     return (
 
@@ -83,9 +83,6 @@ function AccountContent({ active }) {
     )
 }
 
-AccountContent.propTypes = {
-
-}
 
 export default AccountContent
 

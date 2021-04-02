@@ -4,7 +4,6 @@ import { Link as LinkScroll } from 'react-scroll';
 import { NavLink, Link as LinkRoute } from 'react-router-dom'
 import { FaTimes } from 'react-icons/fa'
 import { GrLogout } from 'react-icons/gr'
-import { userLogin } from '../../config/settings'
 import { useDispatch, useSelector } from 'react-redux';
 import { dang_xuat } from '../../redux/types/QuanLyNguoiDungTypes';
 

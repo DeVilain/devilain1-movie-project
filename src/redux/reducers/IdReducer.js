@@ -8,7 +8,7 @@ if (localStorage.getItem(maLichChieu)) {
 
 const ma = maLichChieuTemp;
 
-export default (state = ma, action) => {
+export const IdReducer = (state = ma, action) => {
     switch (action.type) {
         case 'GUI_MA':
             state = action.payload;

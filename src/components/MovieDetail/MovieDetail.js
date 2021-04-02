@@ -2,7 +2,7 @@ import React, { useCallback, useEffect, useState } from 'react'
 import { qlPhimService } from '../../services/QuanLyPhimServices';
 import { NavLink } from 'react-router-dom';
 import moment from 'moment';
-import { useDispatch, useSelector } from 'react-redux';
+import {  useSelector } from 'react-redux';
 import { maLichChieu } from '../../config/settings';
 
 const MovieDetail = ({ maPhim }) => {
@@ -38,8 +38,6 @@ const MovieDetail = ({ maPhim }) => {
         }
         return iconArray;
     }
-
-    let dispatch = useDispatch();
 
     return (
         <>

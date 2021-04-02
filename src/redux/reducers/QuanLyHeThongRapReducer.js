@@ -6,7 +6,7 @@ const initialState = {
     danhSachLichChieu: []
 };
 
-export default (state = initialState, action) => {
+export const QuanLyHeThongRapReducer = (state = initialState, action) => {
     switch (action.type) {
         case fetch_HeThongRap_CumRap_LichChieu:
             //console.log(action.dsLichChieu);

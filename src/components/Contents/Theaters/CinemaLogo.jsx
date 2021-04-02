@@ -1,5 +1,4 @@
 import React from 'react'
-import PropTypes from 'prop-types'
 import { useDispatch } from 'react-redux';
 import { setLichChieu_request } from '../../../redux/actions/QuanLyRapAction';
 
@@ -41,9 +40,6 @@ function CinemaLogo({ propsDsHeThongRap, setLogoImg, setMaCumRapIndex, setHeThon
     )
 }
 
-CinemaLogo.propTypes = {
-
-}
 
 export default CinemaLogo
 

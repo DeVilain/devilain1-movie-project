@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 
 function SignInSuccess(props) {
 
-    const [maLichChieuLocal, setMaLichChieuLocal] = useState(() => {
+    const [maLichChieuLocal] = useState(() => {
         if (localStorage.getItem(maLichChieu)) {
             return JSON.parse(localStorage.getItem(maLichChieu));
         } return;

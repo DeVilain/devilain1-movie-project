@@ -4,18 +4,19 @@
 
 .footer-wrapper {
     min-height: 500px;
-    padding: 48px 24px;
+    padding: 48px 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    max-width: 1100px;
+    max-width: 1200px;
     margin: 0 auto;
 }
 
 .footer-links-container {
     display: flex;
     justify-content: center;
+    width: 100%;
     @media screen and (max-width: 820px) {
         padding-top: 32px;
     }
@@ -23,6 +24,8 @@
 
 .footer-links-wrapper {
     display: flex;
+    width: 100%;
+    justify-content: space-between;
     @media screen and (max-width: 820px) {
         flex-direction: column;
     }
@@ -81,13 +84,13 @@ span {
 }
 
 .social-media {
-    max-width: 1000px;
+    max-width: 1200px;
     width: 100%;
     &-wrapper {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        max-width: 1100px;
+        max-width: 1200px;
         margin: 40px auto 0 auto;
         @media screen and (max-width: 820px) {
             flex-direction: column;
