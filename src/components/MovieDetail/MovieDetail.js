@@ -8,9 +8,7 @@ import { maLichChieu } from '../../config/settings';
 const MovieDetail = ({ maPhim }) => {
 
     let userLogined = useSelector(state => state.QuanLyNguoiDungReducer.nguoiDung);
-    //console.log(userLogined);
-    
-    //console.log(user);
+
     // lưu trữ và thay đổi state thongTinPhim
     let [thongTinPhim, setThongTinPhim] = useState({});
 

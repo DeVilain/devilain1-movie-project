@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 
-import { Table, Space, Button, Modal, Pagination } from "antd";
+import { Table, Space, Button, Modal } from "antd";
+import AddMovieComponent from "../../components/Admin/MoviesManagement/AddMovieComponent";
 
 const columns = [
   {
@@ -12,7 +13,7 @@ const columns = [
     title: "Tên phim",
     dataIndex: "tenPhim",
     key: "tenPhim",
-    render: (text) => <a>{text}</a>,
+    render: (text) => <a href="/">{text}</a>,
   },
 
   {
@@ -39,7 +40,6 @@ const data = [
     maPhim: "14324",
     tenPhim: "John Brown",
     moTa: "New York No. 1 Lake Park",
-    
   },
   {
     key: 2,
@@ -56,67 +56,29 @@ const data = [
 ];
 
 const MovieListManagement = () => {
-  const [visible, setVisible] = useState(false);
-  const [confirmLoading, setConfirmLoading] = useState(false);
-  const [modalText, setModalText] = useState("Content of the modal");
-
-  const showModal = () => {
-    setVisible(true);
-  };
-
-  const handleOk = () => {
-    setModalText("The modal will be closed after two seconds");
-    setConfirmLoading(true);
-
-    // modal đóng sau 2s submit
-    setTimeout(() => {
-      setVisible(false);
-      setConfirmLoading(false);
-    }, 2000);
-  };
-
-  const handleCancel = () => {
-    console.log("Clicked cancel button");
-    setVisible(false);
-  };
+  
 
   return (
     <>
       <h2>Quản lý phim</h2>
+      <AddMovieComponent />
 
-      <Button
-        type="primary"
-        shape="round"
-        style={{ marginBottom: "20px" }}
-        onClick={showModal}
-      >
-        Thêm phim
-      </Button>
-
-      {/* Modal thêm phim */}
-      <Modal
-        title="Title"
-        visible={visible}
-        onOk={handleOk}
-        confirmLoading={confirmLoading}
-        onCancel={handleCancel}
-      >
-        <p>{modalText}</p>
-      </Modal>
+   
 
       {/* Table danh sách phim */}
       <Table
         columns={columns}
         dataSource={data}
-        
         pagination={{ position: ["bottomCenter"], pageSize: 10 }}
-        onRow={()=>{
-          return{
-            onClick: event =>{console.log(event.target);}
-          }
+        onRow={() => {
+          return {
+            style: { cursor: "pointer" },
+            onClick: (event) => {
+              console.log(event.target);
+            },
+          };
         }}
       />
-      
     </>
   );
 };

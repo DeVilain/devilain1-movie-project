@@ -21,11 +21,12 @@ axiosClient.interceptors.request.use(
       `${config.method.toUpperCase()} request sent to 
        ${config.baseURL + config.url} at ${new Date().toLocaleString()}`
     );
-    /*    if (localStorage.getItem(accessToken)) {
-      config.headers["Authorization"] = `Bearer ${JSON.parse(
-        localStorage.getItem(accessToken)
+    if (localStorage.getItem(accessToken)) {
+      config.headers["Authorization"] = `Bearer ${localStorage.getItem(
+        accessToken
       )}`;
-    } */
+    }
+
     return config;
   },
   (error) => {

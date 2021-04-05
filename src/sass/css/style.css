@@ -1078,15 +1078,14 @@ button {
   @media screen and (max-width: 420px) {
     .footer-link {
       font-size: 12px; } }
-
-span {
-  color: #fff;
-  text-decoration: none;
-  margin-bottom: 0.5rem;
-  font-size: 14px; }
-  @media screen and (max-width: 420px) {
-    span {
-      font-size: 12px; } }
+  .footer-link span {
+    color: #fff;
+    text-decoration: none;
+    margin-bottom: 0.5rem;
+    font-size: 14px; }
+    @media screen and (max-width: 420px) {
+      .footer-link span {
+        font-size: 12px; } }
 
 .social-media {
   max-width: 1200px;
