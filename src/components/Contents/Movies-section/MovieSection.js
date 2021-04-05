@@ -1,6 +1,6 @@
 import React, { useReducer, useState } from 'react'
 import { useEffect } from 'react';
-import { qlPhimService } from '../../../services/QuanLyPhimServices';
+import { movieApi } from '../../../API/QuanLyPhimAPI/MovieApi';
 import Slide from './Slide'
 
 
@@ -15,7 +15,7 @@ const MovieSection = () => {
 
     // lấy data danh sách phim
     const getDsPhim = () => {
-        qlPhimService.layDanhSachPhim().then(res => {
+        movieApi.getMovieList().then(res => {
             let movieList = res.data;
             let movieListTemp = [];
             let index = 0;
@@ -24,7 +24,7 @@ const MovieSection = () => {
             }
             setDsPhim(movieListTemp);
         }).catch(err => {
-            console.log(err.response.data);
+            console.log(err);
         })
     }
 

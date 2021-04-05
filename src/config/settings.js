@@ -1,15 +1,17 @@
-export const userLogin = 'userLogin';
+export const userLogin = "userLogin";
 
-export const userSignup = 'userSignup';
+export const userSignup = "userSignup";
 
-export const accessToken = 'accessToken';
+export const accessToken = "accessToken";
 
-export const domain = 'https://movie0706.cybersoft.edu.vn';
+export const domain = "https://movie0706.cybersoft.edu.vn";
 
-export const groupID = 'GP02';
+export const groupID = "GP01";
 
-export const groupID2 = 'GP01';
+export const groupID2 = "GP02";
 
-export const maHeThongRap = 'BHDStar'
+export const groupID8 = "GP08";
 
-export const maLichChieu = 'maLichChieu';
+export const maHeThongRap = "BHDStar";
+
+export const maLichChieu = "maLichChieu";

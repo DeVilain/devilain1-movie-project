@@ -2,13 +2,13 @@ import { dang_ky, dang_nhap, dang_xuat, getThongTinUser } from '../types/QuanLyN
 import { accessToken, maLichChieu, userLogin, userSignup } from '../../config/settings'
 
 let usLogin = {};
-if (sessionStorage.getItem(userLogin)) {
-    usLogin = JSON.parse(sessionStorage.getItem(userLogin));
+if (localStorage.getItem(userLogin)) {
+    usLogin = JSON.parse(localStorage.getItem(userLogin));
 }
 
 let usSignup = {};
-if (sessionStorage.getItem(userSignup)) {
-    usSignup = JSON.parse(sessionStorage.getItem(userSignup));
+if (localStorage.getItem(userSignup)) {
+    usSignup = JSON.parse(localStorage.getItem(userSignup));
 }
 
 const initialState = {
@@ -23,9 +23,9 @@ export const QuanLyNguoiDungReducer = (state = initialState, action) => {
             state.nguoiDung = action.nguoiDung;
             return {...state };
         case dang_xuat:
-            sessionStorage.removeItem(userLogin);
-            sessionStorage.removeItem(accessToken);
-            sessionStorage.removeItem(maLichChieu);
+            localStorage.removeItem(userLogin);
+            localStorage.removeItem(accessToken);
+            localStorage.removeItem(maLichChieu);
             return {...state, nguoiDung: {} };
         case dang_ky:
             state.nguoiDangKy = action.nguoiDangKy;

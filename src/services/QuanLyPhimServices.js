@@ -1,8 +1,9 @@
 import axios from 'axios';
-import { domain, groupID, groupID2 } from '../config/settings'
+import axiosClient from '../API/AxiosSetup';
+import { domain, groupID, groupID2, groupID8 } from '../config/settings'
 
 export class QuanLyPhimServices {
-
+    
     layDanhSachPhim = () => {
         return axios({
             url: `${domain}/api/quanlyPhim/laydanhsachphim?manhom=${groupID}`,

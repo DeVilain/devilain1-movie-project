@@ -8,7 +8,7 @@ export const ThongTinTaiKhoanPage = () => {
 
     return (
         <div className="accountInfo-container">
-            {sessionStorage.getItem(userLogin) ?
+            {localStorage.getItem(userLogin) ?
                 <div className="accountInfo-wrapper">
                     <AccountMenu active={active} setActive={setActive} />
                     <AccountContent active={active} />

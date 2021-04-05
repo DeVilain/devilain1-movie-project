@@ -63,8 +63,8 @@ function AccountContent({ active }) {
 
     useEffect(() => {
         function getAccountInfo() {
-            if (sessionStorage.getItem(userLogin)) {
-                let taiKhoan = JSON.parse(sessionStorage.getItem(userLogin)).taiKhoan;
+            if (localStorage.getItem(userLogin)) {
+                let taiKhoan = JSON.parse(localStorage.getItem(userLogin)).taiKhoan;
                 console.log(taiKhoan);
                 dispatch(getThongTinUser_request(taiKhoan));
             }

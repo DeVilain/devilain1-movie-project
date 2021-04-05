@@ -68,7 +68,7 @@ const AdminDashboard = ({ content, adminName }) => {
                         <NavLink to="/">Đăng xuất</NavLink>
                     </div>
                 </Sider>
-                <Layout className="site-layout" style={{ marginLeft: 200 }}>
+                <Layout className="site-layout" style={{ marginLeft: 200, minHeight: '100vh' }}>
 
                     <Content style={{ margin: '64px 16px 0', overflow: 'initial' }}>
                         <div className="site-layout-background" style={{ padding: 24, textAlign: 'center' }}>

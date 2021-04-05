@@ -94,7 +94,7 @@ const Navbar = ({ toggle }) => {
                             <LinkScroll className="nav-linkScroll"
                                 to="lienhe"
                                 smooth={true} duration={500} spy={true}
-                                exact='true' offset={-270}
+                                exact='true' offset={-280}
                             >Liên hệ</LinkScroll>
                         </li>
                     </ul>

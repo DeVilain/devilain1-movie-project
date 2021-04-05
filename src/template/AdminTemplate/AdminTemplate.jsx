@@ -13,8 +13,8 @@ const AdminComponent = (props) => {
 }
 
 const AdminTemplate = ({ Component, ...rest }) => {
-    const adminAuth = JSON.parse(sessionStorage.getItem(userLogin))?.maLoaiNguoiDung;
-    const adminName = JSON.parse(sessionStorage.getItem(userLogin))?.taiKhoan;
+    const adminAuth = JSON.parse(localStorage.getItem(userLogin))?.maLoaiNguoiDung;
+    const adminName = JSON.parse(localStorage.getItem(userLogin))?.taiKhoan;
     return <Route {...rest} render={(props) => {
         return (adminAuth === 'QuanTri') ? <AdminComponent adminName={adminName}>
             <Component {...props} />
