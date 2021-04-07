@@ -11,4 +11,9 @@ export const movieApi = {
     const url = `/QuanLyRap/LayThongTinLichChieuPhim?maPhim=${id}`;
     return axiosClient.get(url);
   },
+
+  addMovie: (newMovie) => {
+    const url = `/QuanLyPhim/ThemPhimUploadHinh`;
+    return axiosClient.post(url, newMovie);
+  },
 };

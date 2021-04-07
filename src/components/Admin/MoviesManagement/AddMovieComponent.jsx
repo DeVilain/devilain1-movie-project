@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Button, Modal} from "antd";
+import { Button, Modal } from "antd";
 import AddForm from "./AddForm";
 import moment from "moment";
 
@@ -46,24 +46,6 @@ const AddMovieComponent = () => {
     setVisible(true);
   }
 
-  // handle ngayKhoiChieu + danhGia value
-  function onChange(value, dateString) {
-    // format time
-    const time = moment(dateString).format("YYYY-MM-DDTHH:mm:ss");
-    setValues({ ...values, danhGia: value, ngayKhoiChieu: time });
-  }
-
-  function handleSubmit(e) {
-    e.preventDefault();
-    
-    console.log("submitted");
-    //setConfirmLoading(true);
-    /* setTimeout(() => {
-      setVisible(false);
-      setConfirmLoading(false);
-    }, 2000); */
-  }
-
   return (
     <>
       <Button
@@ -79,19 +61,17 @@ const AddMovieComponent = () => {
       <Modal
         title="Thêm phim"
         visible={visible}
-        onOk={handleSubmit}
         confirmLoading={confirmLoading}
         okText="Thêm phim"
         onCancel={handleCancel}
+        footer={false}
       >
         <AddForm
-          handleSubmit={handleSubmit}
           setValid={setValid}
           values={values}
           setValues={setValues}
           errors={errors}
           setErrors={setErrors}
-          onChange={onChange}
         />
       </Modal>
     </>

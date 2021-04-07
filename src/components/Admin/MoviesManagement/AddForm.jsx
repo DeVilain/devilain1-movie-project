@@ -1,6 +1,8 @@
 import React, { useEffect } from "react";
-import { Form, Input, Select, DatePicker, InputNumber } from "antd";
+import { Form, Input, Select, DatePicker, InputNumber, Button } from "antd";
 import ErrorList from "antd/lib/form/ErrorList";
+import { movieApi } from "../../../API/QuanLyPhimAPI/MovieApi";
+import moment from "moment";
 
 const { Option } = Select;
 
@@ -15,23 +17,38 @@ const AddForm = ({
 }) => {
   const [form] = Form.useForm();
 
- 
-
   async function onCheck() {
     try {
-      const values = await form.validateFields(["tenPhim"]);
+      const values = await form.validateFields();
       console.log("Success:", values);
     } catch (errorInfo) {
       console.log("Failed:", errorInfo);
     }
   }
 
+  function handleDateTime(dateString) {
+    const dateFormated = moment(dateString).format("YYYY-MM-DD HH:mm:ss");
+    console.log(dateFormated);
+    return dateFormated;
+  }
+
+  function onSubmit() {
+    const formValues = form.getFieldsValue();
+    const dateFormated = moment(formValues["ngayKhoiChieu"]).format("YYYY-MM-DD HH:mm:ss");
+    formValues.ngayKhoiChieu = dateFormated;
+    console.log(formValues);
+    const formData = new FormData();
+    for (let key in formValues) {
+      formData.append(key, formValues[key]);
+    }
+    movieApi.addMovie(formData).then(()=>console.log('%csuccess','color: green'));
+  }
+
   return (
     <Form
       form={form}
       name="complex-form"
-      onFinish={onCheck}
-      onSubmitCapture={onCheck}
+      onFinish={onSubmit}
       labelCol={{ span: 8 }}
       wrapperCol={{ span: 16 }}
     >
@@ -49,9 +66,8 @@ const AddForm = ({
           <Input
             name="maPhim"
             style={{ width: "100%" }}
-            required
             type="number"
-            onChange={(e) => setValues({ ...values, maPhim: e.target.value })}
+            // onChange={(e) => setValues({ ...values, maPhim: e.target.value })}
           />
         </Form.Item>
       </Form.Item>
@@ -67,7 +83,7 @@ const AddForm = ({
           rules={[{ required: true, message: "Vui lòng điền trường này" }]}
         >
           <Input
-            onChange={(e) => setValues({ ...values, tenPhim: e.target.value })}
+            //onChange={(e) => setValues({ ...values, tenPhim: e.target.value })}
             name="tenPhim"
             style={{ width: "100%" }}
           />
@@ -87,7 +103,7 @@ const AddForm = ({
           <Input
             name="biDanh"
             style={{ width: "100%" }}
-            onChange={(e) => setValues({ ...values, biDanh: e.target.value })}
+            // onChange={(e) => setValues({ ...values, biDanh: e.target.value })}
           />
         </Form.Item>
       </Form.Item>
@@ -103,7 +119,7 @@ const AddForm = ({
           rules={[{ required: true, message: "Vui lòng điền trường này" }]}
         >
           <Input
-            onChange={(e) => setValues({ ...values, trailer: e.target.value })}
+            //onChange={(e) => setValues({ ...values, trailer: e.target.value })}
             name="trailer"
             style={{ width: "100%" }}
           />
@@ -121,9 +137,10 @@ const AddForm = ({
           rules={[{ required: true, message: "Vui lòng điền trường này" }]}
         >
           <Input
-            onChange={(e) => setValues({ ...values, hinhAnh: e.target.value })}
+            //onChange={(e) => setValues({ ...values, hinhAnh: e.target.value })}
             name="hinhAnh"
             style={{ width: "100%" }}
+            type="file"
           />
         </Form.Item>
       </Form.Item>
@@ -139,7 +156,7 @@ const AddForm = ({
           rules={[{ required: true, message: "Vui lòng điền trường này" }]}
         >
           <Input
-            onChange={(e) => setValues({ ...values, moTa: e.target.value })}
+            //onChange={(e) => setValues({ ...values, moTa: e.target.value })}
             name="moTa"
             style={{ width: "100%" }}
           />
@@ -154,7 +171,7 @@ const AddForm = ({
         <Select
           placeholder="Chọn mã nhóm"
           name="maNhom"
-          onChange={(value) => setValues({ ...values, maNhom: value })}
+          //onChange={(value) => setValues({ ...values, maNhom: value })}
         >
           <Option value="GP01">GP01</Option>
           <Option value="GP02">GP02</Option>
@@ -180,7 +197,7 @@ const AddForm = ({
           style={{ margin: 0 }}
           name="ngayKhoiChieu"
           //onChange={handleChange}
-          onChange={onChange}
+          onChange={handleDateTime}
         />
       </Form.Item>
       <Form.Item
@@ -188,7 +205,16 @@ const AddForm = ({
         label="Đánh giá"
         rules={[{ required: true, message: "Vui lòng đánh giá" }]}
       >
-        <InputNumber name="danhGia" min={1} max={10} onChange={onChange} />
+        <InputNumber
+          name="danhGia"
+          min={1}
+          max={10} /* onChange={onChange} */
+        />
+      </Form.Item>
+      <Form.Item wrapperCol={{ offset: 8 }}>
+        <Button type="primary" htmlType="submit" onClick={onCheck}>
+          Thêm phim
+        </Button>
       </Form.Item>
     </Form>
   );
