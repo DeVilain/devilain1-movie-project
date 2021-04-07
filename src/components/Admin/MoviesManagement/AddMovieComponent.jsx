@@ -1,15 +1,28 @@
 import React, { useState } from "react";
-import { Button, Modal } from "antd";
+import { Button, Modal} from "antd";
 import AddForm from "./AddForm";
+import moment from "moment";
 
 const AddMovieComponent = () => {
-  // trigger display modal
+  // toggle display modal
   const [visible, setVisible] = useState(false);
 
-  // set loading for submit
+  // set loading
   const [confirmLoading, setConfirmLoading] = useState(false);
 
-  const [values, setValues] = useState();
+  const [values, setValues] = useState({
+    maPhim: 0,
+    tenPhim: "",
+    biDanh: "",
+    trailer: "",
+    hinhAnh: "",
+    moTa: "",
+    maNhom: "",
+    ngayKhoiChieu: "",
+    danhGia: 10,
+  });
+  console.log(values);
+  const [errors, setErrors] = useState({});
 
   const [valid, setValid] = useState(false);
 
@@ -33,22 +46,22 @@ const AddMovieComponent = () => {
     setVisible(true);
   }
 
-  function handleChange() {
-
+  // handle ngayKhoiChieu + danhGia value
+  function onChange(value, dateString) {
+    // format time
+    const time = moment(dateString).format("YYYY-MM-DDTHH:mm:ss");
+    setValues({ ...values, danhGia: value, ngayKhoiChieu: time });
   }
 
   function handleSubmit(e) {
     e.preventDefault();
-    if(!valid){
-      console.log('fail');
-      return;
-    }
+    
     console.log("submitted");
-    setConfirmLoading(true);
-    setTimeout(() => {
+    //setConfirmLoading(true);
+    /* setTimeout(() => {
       setVisible(false);
       setConfirmLoading(false);
-    }, 2000);
+    }, 2000); */
   }
 
   return (
@@ -68,9 +81,18 @@ const AddMovieComponent = () => {
         visible={visible}
         onOk={handleSubmit}
         confirmLoading={confirmLoading}
+        okText="Thêm phim"
         onCancel={handleCancel}
       >
-        <AddForm onOk={handleSubmit} setValid={setValid} />
+        <AddForm
+          handleSubmit={handleSubmit}
+          setValid={setValid}
+          values={values}
+          setValues={setValues}
+          errors={errors}
+          setErrors={setErrors}
+          onChange={onChange}
+        />
       </Modal>
     </>
   );

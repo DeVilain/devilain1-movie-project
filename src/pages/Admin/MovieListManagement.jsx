@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-import { Table, Space, Button, Modal } from "antd";
+import { Table, Space} from "antd";
 import AddMovieComponent from "../../components/Admin/MoviesManagement/AddMovieComponent";
 
 const columns = [
@@ -64,7 +64,6 @@ const MovieListManagement = () => {
       <AddMovieComponent />
 
    
-
       {/* Table danh sách phim */}
       <Table
         columns={columns}
