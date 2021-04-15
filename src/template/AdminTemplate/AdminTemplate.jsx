@@ -6,7 +6,6 @@ import { userLogin } from '../../config/settings'
 
 
 const AdminComponent = (props) => {
-    console.log(props);
     return (
         <AdminDashboard content={props.children} adminName={props.adminName}></AdminDashboard>
     )

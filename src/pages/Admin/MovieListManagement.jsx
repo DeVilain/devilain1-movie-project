@@ -1,7 +1,7 @@
-import React, { useState } from "react";
+import React from "react";
 
 import { Table, Space} from "antd";
-import AddMovieComponent from "../../components/Admin/MoviesManagement/AddMovieComponent";
+import AddMovieComponent from "../../components/Admin/MoviesManagement/AddMovie/AddMovieComponent";
 
 const columns = [
   {

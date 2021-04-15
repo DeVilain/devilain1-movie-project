@@ -1,9 +1,8 @@
 import { groupID8 } from "../../config/settings";
 import axiosClient from "../AxiosSetup";
-
 export const movieApi = {
   getMovieList: () => {
-    const url = `/quanlyPhim/laydanhsachphim?maNhom=${groupID8}`;
+    const url = `/QuanLyPhim/LayDanhSachPhim?maNhom=${groupID8}`;
     return axiosClient.get(url);
   },
 

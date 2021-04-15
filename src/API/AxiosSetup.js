@@ -25,6 +25,7 @@ axiosClient.interceptors.request.use(
       config.headers["Authorization"] = `Bearer ${localStorage.getItem(
         accessToken
       )}`;
+      //console.log("header", config.headers);
     }
 
     return config;
